@@ -83,6 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-a99dcbb88bc4bf676afd09ac0bb2a11d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-3fcdd2c46385ea9fc215f42ffbe8b0fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -462,12 +465,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> check_player_win(board, player)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> res</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If no moves left, it's a draw</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    avail_moves_ <span class="op">=</span> avail_moves(board)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> avail_moves_:</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="dv">0</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Try all possible moves</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> avail_moves_:</span>
@@ -475,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        new_board[i] <span class="op">=</span> player</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        _, score_ <span class="op">=</span> minimax(new_board, opp, player)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        scores.append((i, score_))</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Pick best move for current player</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    scores.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>])</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> scores[<span class="op">-</span><span class="dv">1</span>] <span class="cf">if</span> player <span class="op">==</span> <span class="st">"X"</span> <span class="cf">else</span> scores[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -484,6 +487,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="4" class="anchored" data-anchor-id="interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</h2>
 <p>The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.</p>
 <p>The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure"><img src="media/tictactoe-preview.png" class="img-fluid figure-img" alt="Figure"></a></p>
+<figcaption>Figure</figcaption>
+</figure>
+</div>
 </section>
 <section id="key-features" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="key-features"><span class="header-section-number">5</span> Key Features</h2>
@@ -493,7 +502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Interactive UI</strong>: Click-based gameplay using ipywidgets</li>
 <li><strong>Educational</strong>: Clear implementation of classic AI concepts</li>
 </ul>
-<p>The complete code is available on my <a href="https://github.com/MahbubAlam231">GitHub</a> with detailed comments explaining each component.</p>
+<p>The complete code is available on my <a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe">GitHub</a> with detailed comments explaining each component.</p>
 </section>
 <section id="what-i-learned" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">6</span> What I Learned</h2>
@@ -1194,6 +1203,38 @@ window.document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 </script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

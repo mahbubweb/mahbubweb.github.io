@@ -42,7 +42,7 @@ Mahbub Alam
 <p>This notebook demonstrates how a simple <strong>AI agent</strong> can play TicTacToe against a human using the <strong>minimax algorithm</strong>.</p>
 <p>We’ll use a <em>magic square representation</em> of the 3×3 board to quickly check for winning combinations.</p>
 <p>AI will always play “X” and human “O”. Let’s start by defining the core constants and helper functions.</p>
-<div id="20889833" class="cell" data-execution_count="1">
+<div id="0355f533" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span>matplotlib inline</span>
@@ -73,42 +73,42 @@ font-style: inherit;">import</span> sleep</span></code></pre></div></div>
 The classic 3×3 magic square:
 <table style="border-collapse: collapse; margin: 20px auto; font-size: 18px; text-align: center;">
 <tbody><tr>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>8</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>3</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>4</b>
 </td>
 </tr>
 <tr>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>1</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>5</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>9</b>
 </td>
 </tr>
 <tr>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>6</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>7</b>
 </td>
-<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;">
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
 <b>2</b>
 </td>
 </tr>
 </tbody></table>
 <p>ensures that any winning line in TicTacToe (row, column, diagonal) sums to 15.</p>
 <p>This allows us to check wins using simple arithmetic instead of explicit board patterns. Each cell maps to its magic square value, enabling efficient win detection.</p>
-<div id="c0d7a079" class="cell" data-execution_count="2">
+<div id="b8fc4279" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">magic <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
@@ -184,7 +184,7 @@ font-style: inherit;">8</span></span>
 <section id="board-display-functions" class="level2">
 <h2 class="anchored" data-anchor-id="board-display-functions">Board Display Functions</h2>
 <p>These functions create and update the interactive game board using ipywidgets. The board uses border styling to create the classic # grid pattern.</p>
-<div id="c7f4e2c8" class="cell" data-execution_count="3">
+<div id="0637973d" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -491,7 +491,7 @@ font-style: inherit;">True</span></span></code></pre></div></div>
 <h2 class="anchored" data-anchor-id="game-logic-functions">Game Logic Functions</h2>
 <p>Core game mechanics including win detection and the <strong>minimax AI algorithm</strong>.</p>
 <p>A helper dictionary and a function first.</p>
-<div id="ee229261" class="cell" data-execution_count="4">
+<div id="938edecd" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># AI will always play "X" and human "O"</span></span>
@@ -554,7 +554,7 @@ font-style: inherit;">"_"</span>]</span></code></pre></div></div>
 <h4 class="anchored" data-anchor-id="definition">Definition:</h4>
 <p><strong>Score</strong> of a board position is defined to be +1 for AI win and -1 for human win.</p>
 <p>Returns None if there’s no winning moves.</p>
-<div id="259e0ba7" class="cell" data-execution_count="5">
+<div id="b71abda9" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -634,7 +634,7 @@ font-style: inherit;">None</span></span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="the-minimax-algorithm">The Minimax Algorithm</h3>
 <p>Minimax algorithm for optimal AI move selection.</p>
 <p>Algorithm: Recursively explores all possible game states assuming optimal play. - X (AI) maximizes the score (+1 for win) - O (human) minimizes the score (-1 for win) - Returns (move, score): score of a board position and a move that achieves that score - Returns (None, 0) for draw</p>
-<div id="a05f8f58" class="cell" data-execution_count="6">
+<div id="a1ce495d" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -734,7 +734,7 @@ font-style: inherit;">0</span>]</span></code></pre></div></div>
 <h2 class="anchored" data-anchor-id="interactive-tictactoe">Interactive TicTacToe</h2>
 <p>Now play the game! Click cells to make your move as ⭕ while the AI plays as <span style="color: #dc3545; font-size: 25px; font-weight: bold;">❌</span>.</p>
 <p>The AI uses the minimax algorithm, so it plays optimally - try to get a draw! 🎮</p>
-<div id="4ddd5562" class="cell">
+<div id="6b4fb608" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -1233,6 +1233,22 @@ AI will play 'X', you play 'O'.
 
 Run the above cell(s) to start playing.
 </code></pre>
+</div>
+<div class="cell-output cell-output-stdin">
+<pre><code>Do you want to play first? [Y/n]  </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code></code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"b04bb235049f42b5bd729913a386ccb4","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"f32139a6959b4cea9f7778045a8cee94","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
 </div>
 </div>
 

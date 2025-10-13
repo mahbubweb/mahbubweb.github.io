@@ -107,7 +107,7 @@ font-style: inherit;">None</span>:</span>
 background-color: null;
 font-weight: bold;
 font-style: inherit;">return</span> res</span>
-<span id="cb1-6">    </span>
+<span id="cb1-6"></span>
 <span id="cb1-7">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># If no moves left, it's a draw</span></span>
@@ -129,7 +129,7 @@ background-color: null;
 font-style: inherit;">None</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span></span>
-<span id="cb1-11">    </span>
+<span id="cb1-11"></span>
 <span id="cb1-12">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Try all possible moves</span></span>
@@ -153,7 +153,7 @@ font-style: inherit;">=</span> player</span>
 background-color: null;
 font-style: inherit;">=</span> minimax(new_board, opp, player)</span>
 <span id="cb1-18">        scores.append((i, score_))</span>
-<span id="cb1-19">    </span>
+<span id="cb1-19"></span>
 <span id="cb1-20">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Pick best move for current player</span></span>
@@ -190,6 +190,12 @@ font-style: inherit;">0</span>]</span></code></pre></div></div>
 <h2 data-number="4" class="anchored" data-anchor-id="interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</h2>
 <p>The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.</p>
 <p>The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure"><img src="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png" class="img-fluid figure-img" alt="Figure"></a></p>
+<figcaption>Figure</figcaption>
+</figure>
+</div>
 </section>
 <section id="key-features" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="key-features"><span class="header-section-number">5</span> Key Features</h2>
@@ -199,7 +205,7 @@ font-style: inherit;">0</span>]</span></code></pre></div></div>
 <li><strong>Interactive UI</strong>: Click-based gameplay using ipywidgets</li>
 <li><strong>Educational</strong>: Clear implementation of classic AI concepts</li>
 </ul>
-<p>The complete code is available on my <a href="https://github.com/MahbubAlam231">GitHub</a> with detailed comments explaining each component.</p>
+<p>The complete code is available on my <a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe">GitHub</a> with detailed comments explaining each component.</p>
 </section>
 <section id="what-i-learned" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">6</span> What I Learned</h2>
