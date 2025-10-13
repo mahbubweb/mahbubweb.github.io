@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mahbubweb.github.io/projects.html</loc>
-    <lastmod>2025-10-13T21:21:33.839Z</lastmod>
+    <lastmod>2025-10-13T22:20:56.636Z</lastmod>
   </url>
   <url>
     <loc>https://mahbubweb.github.io/blog.html</loc>
-    <lastmod>2025-10-13T21:21:33.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/AI_plays_TicTacToe_interactive.html</loc>
-    <lastmod>2025-10-13T21:21:33.839Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/Credit_Risk_Analysis.html</loc>
-    <lastmod>2025-10-13T21:21:33.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/BreastCancerPredictAI.html</loc>
-    <lastmod>2025-10-13T21:21:33.842Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/KNN_fruit_detection.html</loc>
-    <lastmod>2025-10-13T21:21:33.845Z</lastmod>
+    <lastmod>2025-10-13T22:20:56.635Z</lastmod>
   </url>
   <url>
     <loc>https://mahbubweb.github.io/index.html</loc>
-    <lastmod>2025-10-13T21:21:33.839Z</lastmod>
+    <lastmod>2025-10-13T22:20:56.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/KNN_fruit_detection.html</loc>
+    <lastmod>2025-10-13T22:20:56.642Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/BreastCancerPredictAI.html</loc>
+    <lastmod>2025-10-13T22:20:56.639Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/Credit_Risk_Analysis.html</loc>
+    <lastmod>2025-10-13T22:20:56.641Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/AI_plays_TicTacToe_interactive.html</loc>
+    <lastmod>2025-10-13T22:20:56.636Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/index.html</loc>
+    <lastmod>2025-10-13T22:20:56.636Z</lastmod>
   </url>
   <url>
     <loc>https://mahbubweb.github.io/publications.html</loc>
-    <lastmod>2025-10-13T21:21:33.845Z</lastmod>
+    <lastmod>2025-10-13T22:20:56.642Z</lastmod>
   </url>
 </urlset>

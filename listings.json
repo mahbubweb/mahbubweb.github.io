@@ -10,7 +10,9 @@
   },
   {
     "listing": "/blog.html",
-    "items": []
+    "items": [
+      "/posts/2025-09-27-ai-tictactoe/index.html"
+    ]
   },
   {
     "listing": "/publications.html",
