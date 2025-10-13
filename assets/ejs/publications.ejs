@@ -1,3 +1,4 @@
+
 <table class="table">
   <thead>
     <tr>
@@ -8,11 +9,47 @@
     </tr>
   </thead>
   <tbody>
-    <% for (const item of items) { %>
+    <% 
+    // Sort items by year (descending - newest first)
+    const sortedItems = items.sort((a, b) => {
+      const yearA = a.issued['date-parts'][0][0];
+      const yearB = b.issued['date-parts'][0][0];
+      return yearB - yearA; // Descending order
+    });
+    %>
+    
+    <% for (const item of sortedItems) { %>
     <tr>
       <td><%= item.issued['date-parts'][0][0] %></td>
       <td><%= item.title %></td>
-      <td><%= item['author-string'] || 'N/A' %></td>
+      <td>
+        <% 
+        let authorNames = [];
+        
+        if (item['author-string']) {
+          authorNames.push(item['author-string']);
+        } else if (item.author) {
+          if (typeof item.author === 'string') {
+            authorNames.push(item.author);
+          } else if (item.author.length !== undefined && typeof item.author !== 'string') {
+            try {
+              for (let i = 0; i < item.author.length; i++) {
+                let auth = item.author[i];
+                if (auth && typeof auth === 'object') {
+                  let name = '';
+                  if (auth.given) name += auth.given + ' ';
+                  if (auth.family) name += auth.family;
+                  if (name) authorNames.push(name.trim());
+                }
+              }
+            } catch(e) {
+              authorNames.push('Error parsing authors');
+            }
+          }
+        }
+        %>
+        <%= authorNames.length > 0 ? authorNames.join(', ') : 'N/A' %>
+      </td>
       <td><%= item['container-title'] || item.note || '' %></td>
     </tr>
     <% } %>
