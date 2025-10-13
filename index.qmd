@@ -62,8 +62,8 @@ Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon
 ## Interests
 
 - Machine Learning and AI
-- Data Analysis
-- Data Visualisation
+- Data Analysis and Visualisation
+- Board Games
 - Watching Movies
 - Learning New Skills
 :::

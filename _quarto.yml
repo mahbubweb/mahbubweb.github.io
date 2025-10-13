@@ -8,7 +8,7 @@ exclude:
 - README.md
 
 website:
-  title: ""
+  title: "&nbsp;"
   description: "A machine learning, quant analyst blog and portfolio by Mahbub Alam"
   favicon: /assets/images/MA-logo.png
   image: /assets/images/profile.jpeg
@@ -28,7 +28,7 @@ website:
     right: |
       License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
   navbar:
-    title: ""
+    title: "&nbsp;"
     search: true
     background: dark
     logo: assets/images/MA-logo.png
