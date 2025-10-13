@@ -1,10 +1,9 @@
 ---
 title: "Building an Unbeatable AI for TicTacToe"
 description: "How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares"
-author: "Mahbub Alam"
 date: "2025-09-27"
 categories: [AI, Python, Game Theory, Algorithms]
-image: /assets/images/tictactoe-preview.png
+image: media/tictactoe-preview.png
 ---
 
 ## Can You Beat the AI?
