@@ -53,12 +53,12 @@ def minimax(board, player, opp):
     res = check_player_win(board, player)
     if res is not None:
         return res
-    
+
     # If no moves left, it's a draw
     avail_moves_ = avail_moves(board)
     if not avail_moves_:
         return None, 0
-    
+
     # Try all possible moves
     scores = []
     for i in avail_moves_:
@@ -66,7 +66,7 @@ def minimax(board, player, opp):
         new_board[i] = player
         _, score_ = minimax(new_board, opp, player)
         scores.append((i, score_))
-    
+
     # Pick best move for current player
     scores.sort(key=lambda x: x[1])
     return scores[-1] if player == "X" else scores[0]
@@ -78,6 +78,8 @@ The game runs in Jupyter notebooks with an interactive widget-based interface. P
 
 The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!
 
+![Figure](media/tictactoe-preview.png)
+
 ## Key Features
 
 - **Optimal play**: The AI never makes mistakes
@@ -85,7 +87,7 @@ The AI is truly optimal - the best you can do is force a draw. Give it a try and
 - **Interactive UI**: Click-based gameplay using ipywidgets
 - **Educational**: Clear implementation of classic AI concepts
 
-The complete code is available on my [GitHub](https://github.com/MahbubAlam231) with detailed comments explaining each component.
+The complete code is available on my [GitHub](https://github.com/MahbubAlam231/AI_plays_TicTacToe) with detailed comments explaining each component.
 
 ## What I Learned
 
