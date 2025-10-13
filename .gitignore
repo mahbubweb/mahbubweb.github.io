@@ -1,0 +1,35 @@
+.DS_Store
+/.luarc.json
+/.quarto
+
+/.quarto/
+
+**/*.quarto_ipynb
+
+talks.qmd
+_site/
+
+# Freeze directory (computational cache)
+_freeze/
+
+# Python cache (if you use Python in your Quarto docs)
+__pycache__/
+*.pyc
+
+# R files (if you use R)
+.Rproj.user/
+.Rhistory
+.RData
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+
+# Node modules (if you use any JS tools)
+node_modules/

@@ -1,0 +1,39 @@
+
+/* Border button style for 'Projects' link */
+.projects-button {
+  display: inline-block;
+  border: 2px solid #555;     /* visible dark border */
+  border-radius: 6px;         /* rounded corners */
+  padding: 0.25em 0.75em;     /* inner spacing */
+  margin-left: 0.5em;         /* small space from icons */
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+  vertical-align: middle;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+.projects-button:hover {
+  background-color: #f5f5f5;  /* subtle hover background */
+  border-color: #000;
+  color: #000;
+}
+
+.about-link[href : "projects.html"] {
+  display: inline-block;
+  border: 2px solid #555;
+  border-radius: 6px;
+  padding: 0.25em 0.6em;
+  margin-left: 0.5em;
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.about-link[href : "projects.html"]:hover {
+  background-color: #f2f2f2;
+  border-color: #000;
+  color: #000;
+}

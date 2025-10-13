@@ -1,0 +1,44 @@
+---
+title: "Projects"
+title-block-banner: false
+# image: /assets/images/social-profile.png
+# subtitle: "*[{{< iconify fa7-solid:square-rss >}} RSS Feed](projects.xml)*"
+# margin-header: "*[{{< iconify fa7-solid:square-rss >}} RSS Feed](projects.xml)*"
+listing:
+  - id: projects
+    template: assets/ejs/projects.ejs
+    categories: true
+    sort-ui: false
+    sort: "title"
+    # filter-ui: true
+    max-description-length: 400
+    page-size: 6
+    fields: [title, github, description, date, categories]
+    feed:
+      language: en-gb
+    contents:
+      - path: projects/BreastCancerPredictAI.ipynb
+        # image: /projects/breastcancer.png
+        title: "Breast Cancer Prediction"
+        github: "https://github.com/MahbubAlam231/BreastCancerPredictAI"
+        description: "Uses machine‑learning models to classify breast cancer."
+        date: "2025-05-25"
+        categories: [Machine Learning, Health]
+      - path: projects/Credit_Risk_Analysis.ipynb
+        # image: /projects/creditrisk.png
+        title: "Credit Risk Analysis"
+        github: "https://github.com/MahbubAlam231/Credit_Risk_Analysis"
+        description: "Credit risk analysis with the German Credit Dataset.
+        Includes PD and LGD modeling and validation, and EAD and ECL estimations.\n
+
+        Logistic Regression, Random Forest, cross validation"
+        date: "2025-09-16"
+        categories: [Finance, Risk, Machine Learning]
+      - path: projects/KNN_fruit_detection.ipynb
+        # image: /projects/knn_fruit.png
+        title: "KNN Fruit Detection"
+        github: "https://github.com/MahbubAlam231/machine-learning-scikit-learn"
+        description: "Detects fruits using a K‑Nearest Neighbors classifier."
+        date: "2025-04-04"
+        categories: [Machine Learning, Computer Vision]
+---

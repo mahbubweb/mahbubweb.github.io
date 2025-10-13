@@ -1,0 +1,89 @@
+project:
+  type: website
+  resources:
+    - _headers
+  output-dir: _site
+
+exclude:
+- README.md
+
+website:
+  title: ""
+  description: "A machine learning, quant analyst blog and portfolio by Mahbub Alam"
+  favicon: /assets/images/MA-logo.png
+  image: /assets/images/profile.jpeg
+  site-url: https://mahbubweb.github.io/
+  repo-url: https://github.com/mahbubweb/mahbubweb.github.io/
+  # repo-actions: [edit, issue]
+  open-graph: true
+  twitter-card: true
+  page-navigation: true
+  back-to-top-navigation: true
+  page-footer:
+    border: true
+    left: |
+      Powered by [{{< iconify simple-icons:quarto title="Quarto Logo" label="Quarto Logo" >}} Quarto](https://quarto.org).
+    center: |
+      &copy; []{#current-year} Mahbub Alam
+    right: |
+      License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
+  navbar:
+    title: ""
+    search: true
+    background: dark
+    logo: assets/images/MA-logo.png
+    logo-alt: "MA logo"
+    right:
+      - text: About
+        href: index.qmd
+      - text: Blog
+        href: blog.qmd
+      - text: Projects
+        href: projects.qmd
+      # - text: Talks
+      #   href: talks.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: '{{< iconify fa7-brands:linkedin title="LinkedIn" label="LinkedIn" >}}'
+        href: 'https://www.linkedin.com/in/mahbub-alam-84899356/'
+        rel: me
+      - text: '{{< iconify octicon:mark-github-16 title="GitHub" label="GitHub" >}}'
+        href: "https://github.com/MahbubAlam231"
+
+format:
+  html:
+    grid:
+      body-width: 1000px
+    theme:
+      light:
+        - cosmo
+        - assets/stylesheets/projects.scss
+        - brand
+      dark:
+        - cosmo
+        - assets/stylesheets/projects.scss
+        - brand
+    lang: en-GB
+    date-format: 'YYYY-MM-DD'
+    highlight-style: github
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    anchor-sections: true
+    email-obfuscation: javascript
+    link-external-newwindow: true
+    fig-align: center
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    include-after-body:
+      - file: assets/scripts/ordinal-dates.html
+      - file: assets/scripts/current-year.html
+      - file: assets/scripts/categories-alphabetical.html
+      - file: assets/scripts/modal-clipboardjs.html
+
+lightbox: auto
+
+execute:
+  freeze: true

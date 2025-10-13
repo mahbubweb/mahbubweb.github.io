@@ -1,0 +1,109 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+.projects {
+  flex: 10 50%;
+  background: $dark;
+  box-shadow: 0 2px 4px 0 rgba($gray-700, 0.2), 0 5px 15px 0 rgba($gray-300, 0.15);
+  border-radius: 15px;
+  margin: 0px;
+  padding: 0px 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  transition: 0.7s;
+
+  .card-body {
+    padding: 0 var(--bs-card-spacer-x);
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .listing-description {
+    flex-grow: 1;
+  }
+
+  .listing-modal {
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-footer {
+    background-color: $dark;
+    border-top: var(--bs-card-border-width) solid var(--bs-gray);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h5.card-title:hover {
+    text-decoration: auto;
+  }
+
+  .listing-date {
+      font-style: italic;
+      margin-left: auto;
+  }
+
+  #github-link {
+    position: absolute;
+    top: 0.4em;
+    right: 0.6em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    z-index: 3; /* ensure GitHub link sits above overlay anchor */
+  }
+
+  .quarto-grid-link:hover {
+    color: $link-color;
+  }
+
+  #github-link:hover {
+    transform: scale(1.2);
+  }
+
+  .github-text {
+      font-family: inherit;
+      letter-spacing: 0.02em;
+  }
+
+  h5.card-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $body-color;
+      margin-bottom: 0.25rem;
+  }
+
+  /* Overlay link that makes the entire card clickable. */
+  .card-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+}
+
+#projects-pagination {
+  padding-top: 0.5em;
+}

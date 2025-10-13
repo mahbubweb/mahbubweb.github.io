@@ -1,0 +1,71 @@
+---
+title: "Mahbub Alam"
+subtitle: |
+  PhD, postdoc in Mathematics | Quant Analyst | Data Science
+image: /assets/images/profile.jpeg
+format:
+  html:
+    grid:
+      body-width: 800px
+about:
+  id: edu-exp
+  template: solana
+  image-width: 9em
+  image-shape: round
+  links:
+        - text: '{{< iconify fa7-solid:envelope title="Envelope logo for email" label="Envelope logo for email" >}}'
+          href: "mailto:mahbub.dta@gmail.com"
+          aria-label: "Envelope logo for email"
+        # - text: '{{< iconify fa7-brands:orcid title="ORCID logo linking to Mahbub Alam ORCID account" label="ORCID logo linking to Mahbub Alam ORCID account" >}}'
+        #   href: "https://orcid.org/0000-0002-3396-4549"
+        #   aria-label: "ORCID logo linking to Mahbub Alam ORCID account"
+        # - text: '{{< iconify fa7-brands:bluesky title="BlueSky logo linking to MahbubAlam account" label="BlueSky logo linking to MahbubAlam account" >}}'
+        #   href: "https://bsky.app/profile/mickael.canouil.fr"
+        #   aria-label: "BlueSky logo linking to mickael.canouil.fr account"
+        - text: '{{< iconify fa7-brands:linkedin title="LinkedIn logo linking to my account" label="LinkedIn logo linking to my account" >}}'
+          href: "https://www.linkedin.com/in/mahbub-alam-84899356/"
+          aria-label: "LinkedIn logo linking to MahbubAlam account"
+        - text: '{{< iconify octicon:mark-github-16 title="GitHub logo linking to my account" label="GitHub logo linking to my account" >}}'
+          href: "https://github.com/MahbubAlam231"
+          aria-label: "GitHub logo linking to my account"
+        - text: Projects
+          href: "projects.html"
+---
+
+::: {#edu-exp}
+:::
+
+PhD in Mathematics with postdoctoral experience, specializing in statistical analysis, modeling, stochastic processes, and machine learning. I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation.
+
+I have developed Python-based ML solutions for Credit Risk Analysis, Breast Cancer Prediction, and Fruit Classification, using logistic regression, random forest, and k-NN algorithms. I also leverage SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
+
+I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.
+
+Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf).
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
+## Education
+
+- **_Ph.D._ in Mathematics**, **2021**
+  *Tata Institute of Fundamental Research, Mumbai, India*
+
+- **_M.Math_** (*Specialised in Statistical methods*), **2016**
+  *Indian Statistical Institute, Kolkata, India*
+
+- **_B.Sc._ in Mathematics**, **2014**
+  *Presidency University, Kolkata, India*
+:::
+
+::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
+## Interests
+
+- Machine Learning and AI
+- Data Analysis
+- Data Visualisation
+- Watching Movies
+- Learning New Skills
+:::
+
+::::

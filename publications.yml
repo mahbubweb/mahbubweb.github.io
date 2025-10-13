@@ -1,0 +1,88 @@
+- ISSN: 1246-7405,2118-8572
+  URL: http://jtnb.cedram.org/item?id=JTNB_2021__33_1_261_0
+  author:
+    - family: Alam
+      given: Mahbub
+    - family: Ghosh
+      given: Anish
+    - family: Yu
+      given: Shucheng
+  container-title: J. Théor. Nombres Bordeaux
+  id: alamghoshyu21
+  issue: '1'
+  issued:
+    date-parts:
+      - - 2021
+  page: 261-271
+  title: Quantitative Diophantine approximation with congruence conditions
+  type: article-journal
+  volume: '33'
+- DOI: 10.1007/s00029-022-00801-2
+  ISSN: 1022-1824,1420-9020
+  URL: https://doi.org/10.1007/s00029-022-00801-2
+  author:
+    - family: Alam
+      given: Mahbub
+    - family: Ghosh
+      given: Anish
+  container-title: Selecta Math. (N.S.)
+  id: alamghosh22
+  issue: '5'
+  issued:
+    date-parts:
+      - - 2022
+  page: Paper No. 86, 22
+  title: Quantitative rational approximation on spheres
+  type: article-journal
+  volume: '28'
+- DOI: 10.1090/tran/7997
+  ISSN: 0002-9947,1088-6850
+  URL: https://doi.org/10.1090/tran/7997
+  author:
+    - family: Alam
+      given: Mahbub
+    - family: Ghosh
+      given: Anish
+  container-title: Trans. Amer. Math. Soc.
+  id: alamghosh20
+  issue: '5'
+  issued:
+    date-parts:
+      - - 2020
+  page: 3357-3374
+  title: Equidistribution on homogeneous spaces and the distribution of approximates
+    in Diophantine approximation
+  type: article-journal
+  volume: '373'
+- DOI: https://doi.org/10.1017/S147474802300035X
+  ISSN: ''
+  URL: \url{https://arxiv.org/abs/2111.00848}
+  author:
+    - family: Alam
+      given: M.
+    - family: Ghosh
+      given: A.
+    - family: Han
+      given: J.
+  container-title: J. of the Inst. of Math. of Jussieu
+  id: alamghoshhan23
+  issue: '5'
+  issued:
+    date-parts:
+      - - 2024
+  note: ''
+  page: 2081 - 2125
+  title: Higher moment formulae and limiting distributions of lattice points
+  type: article-journal
+  volume: '23'
+- author:
+    - family: Alam
+      given: Mahbub
+    - family: Strömbergsson
+  id: alamstrombergsson24
+  issued:
+    date-parts:
+      - - 2024
+  note: https://arxiv.org/abs/2401.13476
+  title: Adelic Rogers’ formula and an application
+  type: manuscript

@@ -1,0 +1,17 @@
+---
+title: 'Publications'
+title-block-banner: true
+date-format: 'MMMM,<br>YYYY'
+listing:
+  contents:
+    - publications.bib
+  page-size: 10
+  sort: 'issued desc'
+  type: table
+  categories: false
+  fields: [YEAR, TITLE, JOURNAL]
+  field-display-names:
+    YEAR: Issued
+    JOURNAL: Journal
+    TITLE: Title
+---

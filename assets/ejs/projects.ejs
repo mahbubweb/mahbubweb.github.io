@@ -1,0 +1,52 @@
+:::: {.grid .text-center .list}
+
+<% for (const item of items) { %>
+
+:::: {.g-col-12 .g-col-lg-16 .g-col-xl-8 <%= metadataAttrs(item) %>}
+
+:::: {.quarto-grid-item .card .card-center .projects}
+
+:::: {.card-body .post-contents}
+
+<a href="<%- item.github %>" target="_blank" id="github-link" class="quarto-grid-link">
+  <span class="github-text">GitHub Link</span>
+  {{< iconify octicon:mark-github-16 width=22 height=22 title="GitHub Repository" >}}
+</a>
+
+<a class="quarto-grid-link" href="<%- item.path %>">
+  <h5 class="no-anchor card-title listing-title"><%= item.title %></h5>
+</a>
+
+:::: {.listing-categories}
+```{=html}
+<% for (const category of item.categories) { %>
+<div class="listing-category" onclick="window.quartoListingCategory('<%= utils.b64encode(category) %>'); return false;"><%= category %></div>
+<% } %>
+```
+:::
+
+:::: {.card-text}
+:::: {.listing-description}
+<%= item.description %>
+:::
+
+:::
+
+:::: {.listing-date}
+<%= item.date %>
+:::
+:::
+
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<a href="<%- item.path %>" class="card-overlay-link" aria-label="Open <%= item.title %>"></a>
+
+:::
+
+:::
+
+<% } %>
+
+:::
