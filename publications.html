@@ -42,12 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-1468d9f0d3b75ddbecc0e432ee1c1bcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b82e33659634ea8a5d49515fff2687ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1468d9f0d3b75ddbecc0e432ee1c1bcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-a99dcbb88bc4bf676afd09ac0bb2a11d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-3fcdd2c46385ea9fc215f42ffbe8b0fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a99dcbb88bc4bf676afd09ac0bb2a11d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -86,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-YEAR','listing-TITLE','listing-JOURNAL',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-filename-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-ISSN','listing-URL','listing-author','listing-container-title','listing-id','listing-issue','listing-issued','listing-page','listing-title','listing-type','listing-volume','listing-author-string','listing-DOI','listing-note',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-filename","listing-file-modified"],
+      searchColumns: ["listing-ISSN","listing-URL","listing-author","listing-container-title","listing-id","listing-issue","listing-issued","listing-page","listing-title","listing-type","listing-volume","listing-author-string","listing-DOI","listing-note"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -144,7 +142,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -286,10 +284,8 @@ window.Quarto = {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = false;
+    const authorPrefersDark = true;
     const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -309,7 +305,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -360,78 +356,126 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Publications</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Publications</h1>
 </div>
-<table class="quarto-listing-table table">
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+<table class="table">
 <thead>
 <tr>
-
 <th>
-Issued
+Year
 </th>
-
 <th>
 Title
 </th>
-
+<th>
+Authors
+</th>
 <th>
 Journal
 </th>
-
 </tr>
 </thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1760370043333" data-listing-filename-sort="publications.bib">
+<tbody>
+<tr>
 <td>
-<span class="listing-YEAR">&nbsp;</span>
+2021
 </td>
 <td>
-<span class="listing-TITLE">&nbsp;</span>
+Quantitative Diophantine approximation with congruence conditions
 </td>
 <td>
-<span class="listing-JOURNAL">&nbsp;</span>
+Mahbub Alam, Anish Ghosh, Shucheng Yu
 </td>
-
+<td>
+J. Théor. Nombres Bordeaux
+</td>
 </tr>
-
+<tr>
+<td>
+2022
+</td>
+<td>
+Quantitative rational approximation on spheres
+</td>
+<td>
+Mahbub Alam, Anish Ghosh
+</td>
+<td>
+Selecta Math. (N.S.)
+</td>
+</tr>
+<tr>
+<td>
+2020
+</td>
+<td>
+Equidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation
+</td>
+<td>
+Mahbub Alam, Anish Ghosh
+</td>
+<td>
+Trans. Amer. Math. Soc.
+</td>
+</tr>
+<tr>
+<td>
+2024
+</td>
+<td>
+Higher moment formulae and limiting distributions of lattice points
+</td>
+<td>
+M. Alam, A. Ghosh, J. Han
+</td>
+<td>
+J. of the Inst. of Math. of Jussieu
+</td>
+</tr>
+<tr>
+<td>
+2024
+</td>
+<td>
+Adelic Rogers’ formula and an application
+</td>
+<td>
+Mahbub Alam, Andreas Strömbergsson
+</td>
+<td>
+https://arxiv.org/abs/2401.13476
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
