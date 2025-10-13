@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "projects/BreastCancerPredictAI.html",
+      "projects/Credit_Risk_Analysis.html",
+      "projects/AI_plays_TicTacToe_interactive.html",
+      "projects/KNN_fruit_detection.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": []
+  },
+  {
+    "listing": "/publications.html",
+    "items": []
+  }
+]

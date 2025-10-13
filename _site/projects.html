@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Publications – &nbsp;</title>
+<title>Projects – &nbsp;</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,20 +77,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-ISSN','listing-URL','listing-author','listing-container-title','listing-id','listing-issue','listing-issued','listing-page','listing-title','listing-type','listing-volume','listing-author-string','listing-DOI','listing-note',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-github','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-ISSN","listing-URL","listing-author","listing-container-title","listing-id","listing-issue","listing-issued","listing-page","listing-title","listing-type","listing-volume","listing-author-string","listing-DOI","listing-note"],
+      searchColumns: ["listing-title","listing-github","listing-description","listing-date","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -134,15 +134,15 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Publications – &nbsp;">
+<link rel="alternate" type="application/rss+xml" title="&amp;nbsp;" href="projects.xml" data-external="1"><meta property="og:title" content="Projects – &nbsp;">
 <meta property="og:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta property="og:site_name" content="&amp;nbsp;">
-<meta name="twitter:title" content="Publications – &nbsp;">
+<meta name="twitter:title" content="Projects – &nbsp;">
 <meta name="twitter:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -332,11 +332,11 @@ window.Quarto = {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./publications.html" aria-current="page"> 
+    <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
@@ -359,14 +359,16 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluYW5jZQ==">Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FtZXM=">Games <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Umlzaw==">Risk <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Publications</h1>
+<h1 class="title">Projects</h1>
 </div>
 
 
@@ -387,97 +389,142 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<table class="table">
-<thead>
-<tr>
-<th>
-Year
-</th>
-<th>
-Title
-</th>
-<th>
-Authors
-</th>
-<th>
-Journal
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-2024
-</td>
-<td>
-Higher moment formulae and limiting distributions of lattice points
-</td>
-<td>
-M. Alam, A. Ghosh, J. Han
-</td>
-<td>
-J. of the Inst. of Math. of Jussieu
-</td>
-</tr>
-<tr>
-<td>
-2024
-</td>
-<td>
-Adelic Rogers’ formula and an application
-</td>
-<td>
-Mahbub Alam, Andreas Strömbergsson
-</td>
-<td>
-https://arxiv.org/abs/2401.13476
-</td>
-</tr>
-<tr>
-<td>
-2022
-</td>
-<td>
-Quantitative rational approximation on spheres
-</td>
-<td>
-Mahbub Alam, Anish Ghosh
-</td>
-<td>
-Selecta Math. (N.S.)
-</td>
-</tr>
-<tr>
-<td>
-2021
-</td>
-<td>
-Quantitative Diophantine approximation with congruence conditions
-</td>
-<td>
-Mahbub Alam, Anish Ghosh, Shucheng Yu
-</td>
-<td>
-J. Théor. Nombres Bordeaux
-</td>
-</tr>
-<tr>
-<td>
-2020
-</td>
-<td>
-Equidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation
-</td>
-<td>
-Mahbub Alam, Anish Ghosh
-</td>
-<td>
-Trans. Amer. Math. Soc.
-</td>
-</tr>
-</tbody>
-</table>
+<div class="quarto-listing quarto-listing-container-custom" id="listing-projects">
+<div class="grid text-center list">
+<div class="g-col-12 g-col-lg-16 g-col-xl-8" data-index="0" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDSGVhbHRo" data-listing-date-sort="1748131200000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/BreastCancerPredictAI" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub Link</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html">
+<h5 class="no-anchor card-title listing-title">
+Breast Cancer Prediction
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">Health</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Uses machine‑learning models to classify breast cancer. Includes crossvalidation and has high recall due to industry specific demands.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-05-25</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/BreastCancerPredictAI.html" class="card-overlay-link" aria-label="Open Breast Cancer Prediction"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-16 g-col-xl-8" data-index="1" data-categories="RmluYW5jZSUyQ1Jpc2slMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-date-sort="1757980800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/Credit_Risk_Analysis" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub Link</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html">
+<h5 class="no-anchor card-title listing-title">
+Credit Risk Analysis
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Umlzaw=='); return false;">Risk</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Credit risk analysis with the German Credit Dataset. Includes PD and LGD modeling and validation, and EAD and ECL estimations.</p>
+<p>Logistic Regression, Random Forest, cross validation</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-09-16</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/Credit_Risk_Analysis.html" class="card-overlay-link" aria-label="Open Credit Risk Analysis"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-16 g-col-xl-8" data-index="2" data-categories="R2FtZXMlMkNBSSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-date-sort="1758844800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub Link</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html">
+<h5 class="no-anchor card-title listing-title">
+AI plays TicTacToe
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2FtZXM='); return false;">Games</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Interactive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-09-26</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/AI_plays_TicTacToe_interactive.html" class="card-overlay-link" aria-label="Open AI plays TicTacToe"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-16 g-col-xl-8" data-index="3" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDQ29tcHV0ZXIlMjBWaXNpb24=" data-listing-date-sort="1743724800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/machine-learning-scikit-learn" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub Link</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/KNN_fruit_detection.html">
+<h5 class="no-anchor card-title listing-title">
+KNN Fruit Detection
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/KNN_fruit_detection.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tcHV0ZXIlMjBWaXNpb24='); return false;">Computer Vision</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Detects fruits using a K‑Nearest Neighbors classifier.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-04-04</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/KNN_fruit_detection.html" class="card-overlay-link" aria-label="Open KNN Fruit Detection"></a></p>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
