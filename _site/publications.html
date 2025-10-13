@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – &nbsp;</title>
+<title>Publications – &nbsp;</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-ISSN','listing-URL','listing-author','listing-container-title','listing-id','listing-issue','listing-issued','listing-page','listing-title','listing-type','listing-volume','listing-author-string','listing-DOI','listing-note',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-ISSN","listing-URL","listing-author","listing-container-title","listing-id","listing-issue","listing-issued","listing-page","listing-title","listing-type","listing-volume","listing-author-string","listing-DOI","listing-note"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,19 +134,15 @@ window.Quarto = {
 };
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="&amp;nbsp;" href="blog.xml" data-external="1"><meta property="og:title" content="Blog – &nbsp;">
-<meta property="og:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
+<meta property="og:title" content="Publications – &nbsp;">
+<meta property="og:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta property="og:site_name" content="&amp;nbsp;">
-<meta property="og:image:height" content="290">
-<meta property="og:image:width" content="293">
-<meta name="twitter:title" content="Blog – &nbsp;">
-<meta name="twitter:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
-<meta name="twitter:image-height" content="290">
-<meta name="twitter:image-width" content="293">
+<meta name="twitter:title" content="Publications – &nbsp;">
+<meta name="twitter:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -309,7 +305,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -332,7 +328,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -340,7 +336,7 @@ window.Quarto = {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link active" href="./publications.html" aria-current="page"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
@@ -360,79 +356,128 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWxnb3JpdGhtcw==">Algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FtZSUyMFRoZW9yeQ==">Game Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QUklMkNQeXRob24lMkNHYW1lJTIwVGhlb3J5JTJDQWxnb3JpdGhtcw==" data-listing-date-sort="1758931200000" data-listing-file-modified-sort="1760394831830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
-<div class="thumbnail"><a href="./posts/2025-09-27-ai-tictactoe/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2025-09-27-ai-tictactoe/index.html" class="no-external">Building an Unbeatable AI for TicTacToe</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2FtZSUyMFRoZW9yeQ=='); return false;">Game Theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnb3JpdGhtcw=='); return false;">Algorithms</div>
-
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Publications</h1>
 </div>
-<div class="delink listing-description"><a href="./posts/2025-09-27-ai-tictactoe/index.html" class="no-external">
-<p>How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2025-09-27-ai-tictactoe/index.html" class="no-external">
-<div class="listing-date">
-2025-09-27
-</div>
-<div class="listing-author">
-Mahbub Alam, <em>Ph.D.</em>
-</div>
-</a>
-</div>
-</div>
-</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+<table class="table">
+<thead>
+<tr>
+<th>
+Year
+</th>
+<th>
+Title
+</th>
+<th>
+Authors
+</th>
+<th>
+Journal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+2024
+</td>
+<td>
+Higher moment formulae and limiting distributions of lattice points
+</td>
+<td>
+M. Alam, A. Ghosh, J. Han
+</td>
+<td>
+J. of the Inst. of Math. of Jussieu
+</td>
+</tr>
+<tr>
+<td>
+2024
+</td>
+<td>
+Adelic Rogers’ formula and an application
+</td>
+<td>
+Mahbub Alam, Andreas Strömbergsson
+</td>
+<td>
+https://arxiv.org/abs/2401.13476
+</td>
+</tr>
+<tr>
+<td>
+2022
+</td>
+<td>
+Quantitative rational approximation on spheres
+</td>
+<td>
+Mahbub Alam, Anish Ghosh
+</td>
+<td>
+Selecta Math. (N.S.)
+</td>
+</tr>
+<tr>
+<td>
+2021
+</td>
+<td>
+Quantitative Diophantine approximation with congruence conditions
+</td>
+<td>
+Mahbub Alam, Anish Ghosh, Shucheng Yu
+</td>
+<td>
+J. Théor. Nombres Bordeaux
+</td>
+</tr>
+<tr>
+<td>
+2020
+</td>
+<td>
+Equidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation
+</td>
+<td>
+Mahbub Alam, Anish Ghosh
+</td>
+<td>
+Trans. Amer. Math. Soc.
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
