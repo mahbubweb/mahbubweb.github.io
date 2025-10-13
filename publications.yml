@@ -17,6 +17,7 @@
   title: Quantitative Diophantine approximation with congruence conditions
   type: article-journal
   volume: '33'
+  author-string: Mahbub Alam, Anish Ghosh, Shucheng Yu
 - DOI: 10.1007/s00029-022-00801-2
   ISSN: 1022-1824,1420-9020
   URL: https://doi.org/10.1007/s00029-022-00801-2
@@ -35,6 +36,7 @@
   title: Quantitative rational approximation on spheres
   type: article-journal
   volume: '28'
+  author-string: Mahbub Alam, Anish Ghosh
 - DOI: 10.1090/tran/7997
   ISSN: 0002-9947,1088-6850
   URL: https://doi.org/10.1090/tran/7997
@@ -54,6 +56,7 @@
     in Diophantine approximation
   type: article-journal
   volume: '373'
+  author-string: Mahbub Alam, Anish Ghosh
 - DOI: https://doi.org/10.1017/S147474802300035X
   ISSN: ''
   URL: \url{https://arxiv.org/abs/2111.00848}
@@ -75,10 +78,12 @@
   title: Higher moment formulae and limiting distributions of lattice points
   type: article-journal
   volume: '23'
+  author-string: M. Alam, A. Ghosh, J. Han
 - author:
     - family: Alam
       given: Mahbub
     - family: Strömbergsson
+      given: Andreas
   id: alamstrombergsson24
   issued:
     date-parts:
@@ -86,3 +91,4 @@
   note: https://arxiv.org/abs/2401.13476
   title: Adelic Rogers’ formula and an application
   type: manuscript
+  author-string: Mahbub Alam, Andreas Strömbergsson

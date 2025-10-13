@@ -1,17 +1,15 @@
 ---
 title: 'Publications'
-title-block-banner: true
-date-format: 'MMMM,<br>YYYY'
+title-block-banner: false
+image: /assets/images/profile.jpeg
+date-format: 'YYYY'
 listing:
   contents:
-    - publications.bib
-  page-size: 10
+    - publications.yml
   sort: 'issued desc'
   type: table
   categories: false
-  fields: [YEAR, TITLE, JOURNAL]
-  field-display-names:
-    YEAR: Issued
-    JOURNAL: Journal
-    TITLE: Title
+  sort-ui: false
+  filter-ui: false
+  template: assets/ejs/publications.ejs
 ---

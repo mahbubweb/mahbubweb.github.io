@@ -7,6 +7,8 @@
 **/*.quarto_ipynb
 
 talks.qmd
+publications.json
+
 _site/
 
 # Freeze directory (computational cache)

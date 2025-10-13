@@ -9,7 +9,7 @@ listing:
     template: assets/ejs/projects.ejs
     categories: true
     sort-ui: false
-    sort: "title"
+    # sort: "date"
     # filter-ui: true
     max-description-length: 400
     page-size: 6
@@ -21,7 +21,8 @@ listing:
         # image: /projects/breastcancer.png
         title: "Breast Cancer Prediction"
         github: "https://github.com/MahbubAlam231/BreastCancerPredictAI"
-        description: "Uses machine‑learning models to classify breast cancer."
+        description: "Uses machine‑learning models to classify breast cancer.
+        Includes crossvalidation and has high recall due to industry specific demands."
         date: "2025-05-25"
         categories: [Machine Learning, Health]
       - path: projects/Credit_Risk_Analysis.ipynb
@@ -34,6 +35,12 @@ listing:
         Logistic Regression, Random Forest, cross validation"
         date: "2025-09-16"
         categories: [Finance, Risk, Machine Learning]
+      - path: projects/AI_plays_TicTacToe_interactive.ipynb
+        title: "AI plays TicTacToe"
+        github: "https://github.com/MahbubAlam231/AI_plays_TicTacToe"
+        description: "Interactive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves."
+        date: "2025-09-26"
+        categories: [Games, AI, Machine Learning]
       - path: projects/KNN_fruit_detection.ipynb
         # image: /projects/knn_fruit.png
         title: "KNN Fruit Detection"

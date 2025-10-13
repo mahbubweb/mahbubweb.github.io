@@ -1,7 +1,7 @@
 ---
-title: "Mahbub Alam"
+title: "Mahbub Alam, PhD"
 subtitle: |
-  PhD, postdoc in Mathematics | Quant Analyst | Data Science
+  Postdoc in Mathematics | Quant Analyst | Data Scientist
 image: /assets/images/profile.jpeg
 format:
   html:
@@ -13,6 +13,8 @@ about:
   image-width: 9em
   image-shape: round
   links:
+        - text: Projects
+          href: "projects.html"
         - text: '{{< iconify fa7-solid:envelope title="Envelope logo for email" label="Envelope logo for email" >}}'
           href: "mailto:mahbub.dta@gmail.com"
           aria-label: "Envelope logo for email"
@@ -28,8 +30,6 @@ about:
         - text: '{{< iconify octicon:mark-github-16 title="GitHub logo linking to my account" label="GitHub logo linking to my account" >}}'
           href: "https://github.com/MahbubAlam231"
           aria-label: "GitHub logo linking to my account"
-        - text: Projects
-          href: "projects.html"
 ---
 
 ::: {#edu-exp}
@@ -41,7 +41,7 @@ I have developed Python-based ML solutions for Credit Risk Analysis, Breast Canc
 
 I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.
 
-Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf).
+Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 :::: {.grid}
 

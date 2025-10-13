@@ -55,11 +55,11 @@ format:
     grid:
       body-width: 1000px
     theme:
-      light:
+      dark:
         - cosmo
         - assets/stylesheets/projects.scss
         - brand
-      dark:
+      light:
         - cosmo
         - assets/stylesheets/projects.scss
         - brand

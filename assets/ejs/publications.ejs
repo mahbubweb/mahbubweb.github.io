@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Journal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (const item of items) { %>
+    <tr>
+      <td><%= item.issued['date-parts'][0][0] %></td>
+      <td><%= item.title %></td>
+      <td><%= item['author-string'] || 'N/A' %></td>
+      <td><%= item['container-title'] || item.note || '' %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
