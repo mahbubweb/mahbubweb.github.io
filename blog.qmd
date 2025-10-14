@@ -26,5 +26,4 @@ comments:
     theme: "light"
     language: "en"
     loading: "lazy"
-
 ---
