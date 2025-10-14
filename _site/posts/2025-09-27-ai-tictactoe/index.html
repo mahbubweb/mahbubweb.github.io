@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mahbub Alam, Ph.D.">
+<meta name="dcterms.date" content="2025-09-27">
+<meta name="description" content="How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares">
 
-<title>Publications</title>
+<title>Building an Unbeatable AI for TicTacToe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,33 +23,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href=".//assets/images/MA-logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1468d9f0d3b75ddbecc0e432ee1c1bcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b82e33659634ea8a5d49515fff2687ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7a236338923a4a4bbbe185a07a9f440e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-23d23c4cf32f0d972118c3d0d3eee076.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//assets/images/MA-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1468d9f0d3b75ddbecc0e432ee1c1bcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b82e33659634ea8a5d49515fff2687ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7a236338923a4a4bbbe185a07a9f440e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-23d23c4cf32f0d972118c3d0d3eee076.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,74 +113,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-ISSN','listing-URL','listing-author','listing-container-title','listing-id','listing-issue','listing-issued','listing-page','listing-title','listing-type','listing-volume','listing-author-string','listing-DOI','listing-note',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-ISSN","listing-URL","listing-author","listing-container-title","listing-id","listing-issue","listing-issued","listing-page","listing-title","listing-type","listing-volume","listing-author-string","listing-DOI","listing-note"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Publications">
-<meta property="og:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
-<meta name="twitter:title" content="Publications">
-<meta name="twitter:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
+<meta property="og:title" content="Building an Unbeatable AI for TicTacToe">
+<meta property="og:description" content="How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares">
+<meta property="og:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
+<meta property="og:image:height" content="289">
+<meta property="og:image:width" content="294">
+<meta name="twitter:title" content="Building an Unbeatable AI for TicTacToe">
+<meta name="twitter:description" content="How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares">
+<meta name="twitter:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
+<meta name="twitter:image-height" content="289">
+<meta name="twitter:image-width" content="294">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -308,9 +295,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/MA-logo.png" alt="MA logo" class="navbar-logo light-content">
-    <img src="./assets/images/MA-logo.png" alt="MA logo" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/MA-logo.png" alt="MA logo" class="navbar-logo light-content">
+    <img src="../../assets/images/MA-logo.png" alt="MA logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -320,19 +307,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./publications.html" aria-current="page"> 
+    <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
@@ -355,21 +342,57 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#can-you-beat-the-ai" id="toc-can-you-beat-the-ai" class="nav-link active" data-scroll-target="#can-you-beat-the-ai"><span class="header-section-number">1</span> Can You Beat the AI?</a></li>
+  <li><a href="#the-magic-square-trick" id="toc-the-magic-square-trick" class="nav-link" data-scroll-target="#the-magic-square-trick"><span class="header-section-number">2</span> The Magic Square Trick</a></li>
+  <li><a href="#the-minimax-algorithm" id="toc-the-minimax-algorithm" class="nav-link" data-scroll-target="#the-minimax-algorithm"><span class="header-section-number">3</span> The Minimax Algorithm</a></li>
+  <li><a href="#interactive-gameplay" id="toc-interactive-gameplay" class="nav-link" data-scroll-target="#interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</a></li>
+  <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features"><span class="header-section-number">5</span> Key Features</a></li>
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned"><span class="header-section-number">6</span> What I Learned</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Publications</h1>
-</div>
+<h1 class="title">Building an Unbeatable AI for TicTacToe</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Game Theory</div>
+    <div class="quarto-category">Algorithms</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://mahbubweb.github.io">Mahbub Alam, <em>Ph.D.</em></a> <a href="https://orcid.org/0000-0002-5872-7259" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2025-09-27</p>
+    </div>
+  </div>
   
     
   </div>
@@ -379,103 +402,121 @@ window.Quarto = {
 </header>
 
 
+<section id="can-you-beat-the-ai" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="can-you-beat-the-ai"><span class="header-section-number">1</span> Can You Beat the AI?</h2>
+<p>I recently built an <a href="../../projects/AI_plays_TicTacToe_interactive.html">interactive TicTacToe game</a> where you play against an AI that never loses. The AI uses the classic <strong>minimax algorithm</strong> combined with a clever <strong>magic square representation</strong> to play optimally.</p>
+</section>
+<section id="the-magic-square-trick" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-magic-square-trick"><span class="header-section-number">2</span> The Magic Square Trick</h2>
+<p>Instead of checking all possible winning patterns explicitly, I used a 3×3 magic square:</p>
+<table style="border-collapse: collapse; margin: 20px auto; font-size: 18px; text-align: center;">
+<tbody><tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>8</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>3</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>4</b>
+</td>
+</tr>
+<tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>1</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>5</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>9</b>
+</td>
+</tr>
+<tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>6</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>7</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>2</b>
+</td>
+</tr>
+</tbody></table>
+<p>In a magic square, every row, column, and diagonal sums to 15. (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.) This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.</p>
+<p>For example, in this board position it is the AI’s move (❌):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="&nbsp;"><img src="media/tictactoe-preview.png" class="img-fluid figure-img" width="150" alt="&nbsp;"></a></p>
+<figcaption>&nbsp;</figcaption>
+</figure>
+</div>
+<p>It observes that the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available. So it plays that position and blocks ⭕’s winning line.</p>
+</section>
+<section id="the-minimax-algorithm" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-minimax-algorithm"><span class="header-section-number">3</span> The Minimax Algorithm</h2>
+<p>The heart of the AI is the minimax algorithm, which:</p>
+<ul>
+<li>Explores all possible future game states recursively</li>
+<li>Assumes both players play optimally</li>
+<li>Maximizes the AI’s score (+1 for win) and minimizes the opponent’s score (-1 for loss)</li>
+<li>Returns a draw (0) when neither player can force a win</li>
+</ul>
+<p>Here’s the core logic:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minimax(board, player, opp):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if current player can win</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> check_player_win(board, player)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> res</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If no moves left, it's a draw</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    avail_moves_ <span class="op">=</span> avail_moves(board)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> avail_moves_:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="dv">0</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Try all possible moves</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> avail_moves_:</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        new_board <span class="op">=</span> board.copy()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        new_board[i] <span class="op">=</span> player</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        _, score_ <span class="op">=</span> minimax(new_board, opp, player)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        scores.append((i, score_))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Pick best move for current player</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    scores.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>])</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> scores[<span class="op">-</span><span class="dv">1</span>] <span class="cf">if</span> player <span class="op">==</span> <span class="st">"X"</span> <span class="cf">else</span> scores[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="interactive-gameplay" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</h2>
+<p>The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.</p>
+<p>The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!</p>
+</section>
+<section id="key-features" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="key-features"><span class="header-section-number">5</span> Key Features</h2>
+<ul>
+<li><strong>Optimal play</strong>: The AI never makes mistakes</li>
+<li><strong>Fast computation</strong>: Magic square logic speeds up win detection</li>
+<li><strong>Interactive UI</strong>: Click-based gameplay using ipywidgets</li>
+<li><strong>Educational</strong>: Clear implementation of classic AI concepts</li>
+</ul>
+<p>The complete code is available on my <a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe">GitHub</a> with detailed comments explaining each component.</p>
+</section>
+<section id="what-i-learned" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">6</span> What I Learned</h2>
+<p>This project reinforced several important concepts:</p>
+<ol type="1">
+<li>How simple mathematical tricks (magic squares) can optimize algorithms</li>
+<li>The elegance of recursive game tree exploration</li>
+<li>The importance of assuming optimal play in competitive AI</li>
+<li>Building interactive experiences in Jupyter notebooks</li>
+</ol>
+<p>Next, I’m planning to extend this approach to more complex games like Connect Four or even Chess endgames!</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<table class="table">
-<thead>
-<tr>
-<th>
-Year
-</th>
-<th>
-Title
-</th>
-<th>
-Authors
-</th>
-<th>
-Journal
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-2024
-</td>
-<td>
-Higher moment formulae and limiting distributions of lattice points
-</td>
-<td>
-M. Alam, A. Ghosh, J. Han
-</td>
-<td>
-J. of the Inst. of Math. of Jussieu
-</td>
-</tr>
-<tr>
-<td>
-2024
-</td>
-<td>
-Adelic Rogers’ formula and an application
-</td>
-<td>
-Mahbub Alam, Andreas Strömbergsson
-</td>
-<td>
-https://arxiv.org/abs/2401.13476
-</td>
-</tr>
-<tr>
-<td>
-2022
-</td>
-<td>
-Quantitative rational approximation on spheres
-</td>
-<td>
-Mahbub Alam, Anish Ghosh
-</td>
-<td>
-Selecta Math. (N.S.)
-</td>
-</tr>
-<tr>
-<td>
-2021
-</td>
-<td>
-Quantitative Diophantine approximation with congruence conditions
-</td>
-<td>
-Mahbub Alam, Anish Ghosh, Shucheng Yu
-</td>
-<td>
-J. Théor. Nombres Bordeaux
-</td>
-</tr>
-<tr>
-<td>
-2020
-</td>
-<td>
-Equidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation
-</td>
-<td>
-Mahbub Alam, Anish Ghosh
-</td>
-<td>
-Trans. Amer. Math. Soc.
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -945,6 +986,38 @@ Trans. Amer. Math. Soc.
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="dark_dimmed">
+<input type="hidden" id="giscus-alt-theme" value="dark_dimmed">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "mcanouil/mickael.canouil.fr";
+    script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkzNDcwODgwMDM=";
+    script.dataset.category = "Blog posts";
+    script.dataset.categoryId = "DIC_kwDOFLAkg84CSh-t";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1128,6 +1201,38 @@ window.document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 </script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
