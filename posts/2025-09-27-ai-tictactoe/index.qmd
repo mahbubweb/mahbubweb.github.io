@@ -36,6 +36,13 @@ In a magic square, every row, column, and diagonal sums to 15.
 (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.)
 This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.
 
+For example, in this board position it is the AI's move (❌):
+
+![&nbsp;](media/tictactoe-preview.png){width="150px"}
+
+It observes that the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available.
+So it plays that position and blocks ⭕'s winning line.
+
 ## The Minimax Algorithm
 
 The heart of the AI is the minimax algorithm, which:
@@ -77,8 +84,6 @@ def minimax(board, player, opp):
 The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.
 
 The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!
-
-![Figure](media/tictactoe-preview.png)
 
 ## Key Features
 

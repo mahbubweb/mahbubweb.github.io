@@ -19,6 +19,7 @@ website:
   twitter-card: true
   page-navigation: true
   back-to-top-navigation: true
+
   page-footer:
     border: true
     left: |
@@ -27,6 +28,7 @@ website:
       &copy; []{#current-year} Mahbub Alam
     right: |
       License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
+
   navbar:
     title: "&nbsp;"
     search: true
@@ -49,6 +51,19 @@ website:
         rel: me
       - text: '{{< iconify octicon:mark-github-16 title="GitHub" label="GitHub" >}}'
         href: "https://github.com/MahbubAlam231"
+
+  comments:
+    giscus:
+      repo: mahbubweb/mahbubweb.github.io
+      repo-id: "R_kgDOQBgpxA"
+      category: "Announcements"
+      category-id: "DIC_kwDOQBgpxM4Cwnw1"
+      mapping: "pathname"
+      reactions-enabled: true
+      input-position: "top"
+      theme: "preferred_color_scheme"
+      language: "en"
+      loading: "lazy"
 
 format:
   html:
