@@ -80,8 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b82e33659634ea8a5d49515fff2687ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a99dcbb88bc4bf676afd09ac0bb2a11d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-3fcdd2c46385ea9fc215f42ffbe8b0fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7a236338923a4a4bbbe185a07a9f440e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-23d23c4cf32f0d972118c3d0d3eee076.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -119,13 +119,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:description" content="How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares">
 <meta property="og:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
 <meta property="og:site_name" content="&amp;nbsp;">
-<meta property="og:image:height" content="290">
-<meta property="og:image:width" content="293">
+<meta property="og:image:height" content="289">
+<meta property="og:image:width" content="294">
 <meta name="twitter:title" content="Building an Unbeatable AI for TicTacToe – &nbsp;">
 <meta name="twitter:description" content="How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares">
 <meta name="twitter:image" content="https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/media/tictactoe-preview.png">
-<meta name="twitter:image-height" content="290">
-<meta name="twitter:image-width" content="293">
+<meta name="twitter:image-height" content="289">
+<meta name="twitter:image-width" content="294">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -449,6 +449,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody></table>
 <p>In a magic square, every row, column, and diagonal sums to 15. (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.) This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.</p>
+<p>For example, in this board position it is the AI’s move (❌):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="&nbsp;"><img src="media/tictactoe-preview.png" class="img-fluid figure-img" width="150" alt="&nbsp;"></a></p>
+<figcaption>&nbsp;</figcaption>
+</figure>
+</div>
+<p>It observes that the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available. So it plays that position and blocks ⭕’s winning line.</p>
 </section>
 <section id="the-minimax-algorithm" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="the-minimax-algorithm"><span class="header-section-number">3</span> The Minimax Algorithm</h2>
@@ -487,12 +495,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="4" class="anchored" data-anchor-id="interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</h2>
 <p>The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.</p>
 <p>The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure"><img src="media/tictactoe-preview.png" class="img-fluid figure-img" alt="Figure"></a></p>
-<figcaption>Figure</figcaption>
-</figure>
-</div>
 </section>
 <section id="key-features" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="key-features"><span class="header-section-number">5</span> Key Features</h2>
@@ -1008,7 +1010,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkzNDcwODgwMDM=";
     script.dataset.category = "Blog posts";
     script.dataset.categoryId = "DIC_kwDOFLAkg84CSh-t";
-    script.dataset.mapping = "title";
+    script.dataset.mapping = "pathname";
     script.dataset.reactionsEnabled = "1";
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "top";
