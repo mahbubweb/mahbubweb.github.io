@@ -249,7 +249,7 @@
     "href": "projects/AI_plays_TicTacToe_interactive.html#magic-square-representation",
     "title": "AI plays TicTacToe interactive",
     "section": "Magic Square Representation",
-    "text": "Magic Square Representation\nThe classic 3×3 magic square:\n\n\n\n8\n\n\n3\n\n\n4\n\n\n\n\n1\n\n\n5\n\n\n9\n\n\n\n\n6\n\n\n7\n\n\n2\n\n\n\nensures that any winning line in TicTacToe (row, column, diagonal) sums to 15.\nThis allows us to check wins using simple arithmetic instead of explicit board patterns. Each cell maps to its magic square value, enabling efficient win detection.\nLet’s start by defining the core constants.\n\nmagic = [8, 3, 4, 1, 5, 9, 6, 7, 2]\nmagic_ = {\n    8 : 0,\n    3 : 1,\n    4 : 2,\n    1 : 3,\n    5 : 4,\n    9 : 5,\n    6 : 6,\n    7 : 7,\n    2 : 8\n}"
+    "text": "Magic Square Representation\nThe classic 3×3 magic square:\n\n\n\n8\n\n\n3\n\n\n4\n\n\n\n\n1\n\n\n5\n\n\n9\n\n\n\n\n6\n\n\n7\n\n\n2\n\n\n\nensures that any winning line in TicTacToe (row, column, diagonal) sums to 15.\nThis allows us to check wins using simple arithmetic instead of explicit board patterns. Each cell maps to its magic square value, enabling efficient win detection. See my blog post for more explanation.\nLet’s start by defining the core constants.\n\nmagic = [8, 3, 4, 1, 5, 9, 6, 7, 2]\nmagic_ = {\n    8 : 0,\n    3 : 1,\n    4 : 2,\n    1 : 3,\n    5 : 4,\n    9 : 5,\n    6 : 6,\n    7 : 7,\n    2 : 8\n}"
   },
   {
     "objectID": "projects/AI_plays_TicTacToe_interactive.html#board-display-functions",
