@@ -1,0 +1,29 @@
+{
+  "projects/BreastCancerPredictAI.ipynb": {
+    "BreastCancerPredictAI.html": "cb6fd7a7"
+  },
+  "projects/Credit_Risk_Analysis.ipynb": {
+    "Credit_Risk_Analysis.html": "003eea5b"
+  },
+  "projects/KNN_fruit_detection.ipynb": {
+    "KNN_fruit_detection.html": "f1171565"
+  },
+  "projects/AI_plays_TicTacToe_interactive.ipynb": {
+    "AI_plays_TicTacToe_interactive.html": "22d10f0d"
+  },
+  "index.qmd": {
+    "index.html": "6fbe2958"
+  },
+  "posts/2025-09-27-ai-tictactoe/index.qmd": {
+    "index.html": "266d5ed4"
+  },
+  "blog.qmd": {
+    "blog.html": "b2bb80a1"
+  },
+  "publications.qmd": {
+    "publications.html": "6b267cd7"
+  },
+  "projects.qmd": {
+    "projects.html": "564eba07"
+  }
+}
