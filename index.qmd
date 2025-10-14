@@ -1,7 +1,7 @@
 ---
 title: "Mahbub Alam, PhD"
 subtitle: |
-  Postdoc in Mathematics | Quant Analyst | Data Scientist
+  Quantitative Analysis | Data Science | Machine Learning
 image: /assets/images/profile.jpeg
 format:
   html:
@@ -35,12 +35,16 @@ about:
 ::: {#edu-exp}
 :::
 
-PhD in Mathematics with postdoctoral experience, specializing in statistical analysis, modeling, stochastic processes, and machine learning. I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation.
+PhD in Mathematics with postdoctoral experience, specializing in ***statistical analysis, modeling, stochastic processes, and machine learning***.
+<!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
 
-I have developed Python-based ML solutions for Credit Risk Analysis, Breast Cancer Prediction, and Fruit Classification, using logistic regression, random forest, and k-NN algorithms. I also leverage SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
+<!-- My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation. -->
+
+I have developed Python-based ***ML solutions for Credit Risk Analysis***, ***Breast Cancer Prediction***, and ***Computer Vision (Object Detection)***, using logistic regression, random forest, and k-NN algorithms. I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
 
 I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.
 
+Based in Uppsala, Sweden.
 Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 :::: {.grid}
