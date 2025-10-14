@@ -13,4 +13,18 @@ listing:
   filter-ui: false
   feed:
     language: en-gb
+
+comments:
+  giscus:
+    repo: mahbubweb/mahbubweb.github.io
+    repo-id: "R_kgDOQBgpxA"
+    category: "Announcements"
+    category-id: "DIC_kwDOQBgpxM4Cwnw1"
+    mapping: "pathname"
+    reactions-enabled: true
+    input-position: "top"
+    theme: "light"
+    language: "en"
+    loading: "lazy"
+
 ---

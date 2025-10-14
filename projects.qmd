@@ -1,9 +1,9 @@
 ---
 title: "Projects"
-title-block-banner: false
-# image: /assets/images/social-profile.png
 # subtitle: "*[{{< iconify fa7-solid:square-rss >}} RSS Feed](projects.xml)*"
 # margin-header: "*[{{< iconify fa7-solid:square-rss >}} RSS Feed](projects.xml)*"
+title-block-banner: false
+image: /assets/images/profile.jpeg
 listing:
   - id: projects
     template: assets/ejs/projects.ejs
@@ -17,14 +17,6 @@ listing:
     feed:
       language: en-gb
     contents:
-      - path: projects/BreastCancerPredictAI.ipynb
-        # image: /projects/breastcancer.png
-        title: "Breast Cancer Prediction"
-        github: "https://github.com/MahbubAlam231/BreastCancerPredictAI"
-        description: "Uses machine‑learning models to classify breast cancer.
-        Includes crossvalidation and has high recall due to industry specific demands."
-        date: "2025-05-25"
-        categories: [Machine Learning, Health]
       - path: projects/Credit_Risk_Analysis.ipynb
         # image: /projects/creditrisk.png
         title: "Credit Risk Analysis"
@@ -35,6 +27,14 @@ listing:
         Logistic Regression, Random Forest, cross validation"
         date: "2025-09-16"
         categories: [Finance, Risk, Machine Learning]
+      - path: projects/BreastCancerPredictAI.ipynb
+        # image: /projects/breastcancer.png
+        title: "Breast Cancer Prediction"
+        github: "https://github.com/MahbubAlam231/BreastCancerPredictAI"
+        description: "Uses machine‑learning models to classify breast cancer.
+        Includes crossvalidation and has high recall due to industry specific demands."
+        date: "2025-05-25"
+        categories: [Machine Learning, Health]
       - path: projects/AI_plays_TicTacToe_interactive.ipynb
         title: "AI plays TicTacToe"
         github: "https://github.com/MahbubAlam231/AI_plays_TicTacToe"
