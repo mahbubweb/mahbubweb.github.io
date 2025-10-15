@@ -54,12 +54,13 @@ The heart of the AI is the minimax algorithm, which:
 
 - Explores all possible future game states recursively
 - Assumes both players play optimally
-- Maximizes the AI's score (+1 for win) and minimizes the opponent's score (-1 for loss)
+- Gives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy
 - Returns a draw (0) when neither player can force a win
+- Tries to maximize board score
 
 Here's the core logic:
 
-```python
+`python
 def minimax(board, player, opp):
     # Check if current player can win
     res = check_player_win(board, player)
@@ -82,13 +83,13 @@ def minimax(board, player, opp):
     # Pick best move for current player
     scores.sort(key=lambda x: x[1])
     return scores[-1] if player == "X" else scores[0]
-```
+`
 
 ## Interactive Gameplay
 
 You can play the game in Jupyter notebook ([![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)) with an interactive widget-based interface.
 Run all cells, then find the game at the bottom.
-Players click cells to make their moves as ⭕, while the AI responds as ❌.
+Click to make your move as ⭕, while the AI responds as ❌.
 
 The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!
 
