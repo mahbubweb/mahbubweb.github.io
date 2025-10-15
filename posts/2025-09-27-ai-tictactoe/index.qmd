@@ -10,6 +10,11 @@ image: media/tictactoe-preview.png
 
 I recently built an [interactive TicTacToe game](../../projects/AI_plays_TicTacToe_interactive.ipynb) where you play against an AI that never loses. The AI uses the classic **minimax algorithm** combined with a clever **magic square representation** to play optimally.
 
+**🎮 Play online (no setup required):** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
+**Run all cells, then find the game at the bottom.**
+
+Click to make your moves as ⭕, while the AI responds as ❌.
+
 ## The Magic Square Trick
 
 Instead of checking all possible winning patterns explicitly, I used a 3×3 magic square:
@@ -40,7 +45,7 @@ For example, in this board position it is the AI's move (❌):
 
 ![&nbsp;](media/tictactoe-preview.png){width="150px"}
 
-It observes that the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available.
+It observes that (two of) the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available.
 So it plays that position and blocks ⭕'s winning line.
 
 ## The Minimax Algorithm
@@ -81,7 +86,9 @@ def minimax(board, player, opp):
 
 ## Interactive Gameplay
 
-The game runs in Jupyter notebooks with an interactive widget-based interface. Players click cells to make their moves as ⭕, while the AI responds as ❌.
+You can play the game in Jupyter notebook ([![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)) with an interactive widget-based interface.
+Run all cells, then find the game at the bottom.
+Players click cells to make their moves as ⭕, while the AI responds as ❌.
 
 The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!
 
