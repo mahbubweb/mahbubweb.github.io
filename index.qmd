@@ -40,7 +40,9 @@ PhD in Mathematics with postdoctoral experience, specializing in ***statistical 
 
 <!-- My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation. -->
 
-I have developed Python-based ***ML solutions for Credit Risk Analysis***, ***Breast Cancer Prediction***, and ***Computer Vision (Object Detection)***, using logistic regression, random forest, and k-NN algorithms. I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
+I have developed Python-based ***ML solutions for Credit Risk Analysis***, ***Breast Cancer Prediction***, and ***Computer Vision (Object Detection)***, using logistic regression, random forest, and k-NN algorithms.
+<!-- I have also built a [***TicTacToe playing AI***](posts/tictactoe-ai-2025-09-27). -->
+I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
 
 I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.
 
