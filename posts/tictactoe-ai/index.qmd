@@ -55,22 +55,22 @@ The heart of the AI is the minimax algorithm, which:
 - Explores all possible future game states recursively
 - Assumes both players play optimally
 - Gives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy
-- Returns a draw (0) when neither player can force a win
-- Tries to maximize board score
+- Gives score 0 when neither player can force a win
+- Returns a tuple: a move that achieves best score for player and the score
 
 Here's the core logic:
 
 ```python
 def minimax(board, player, opp):
+    # If no moves left, it's a draw (since AI played perfectly)
+    avail_moves_ = avail_moves(board)
+    if not avail_moves_:
+        return None, 0
+
     # Check if current player can win
     res = check_player_win(board, player)
     if res is not None:
         return res
-
-    # If no moves left, it's a draw
-    avail_moves_ = avail_moves(board)
-    if not avail_moves_:
-        return None, 0
 
     # Try all possible moves
     scores = []
