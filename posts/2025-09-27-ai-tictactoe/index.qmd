@@ -2,7 +2,7 @@
 title: "Building an Unbeatable AI for TicTacToe"
 description: "How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares"
 date: "2025-09-27"
-categories: [AI, Python, Game Theory, Algorithms]
+categories: [AI, Game Theory, Algorithms, Python]
 image: media/tictactoe-preview.png
 ---
 
@@ -60,7 +60,7 @@ The heart of the AI is the minimax algorithm, which:
 
 Here's the core logic:
 
-`python
+```python
 def minimax(board, player, opp):
     # Check if current player can win
     res = check_player_win(board, player)
@@ -83,7 +83,7 @@ def minimax(board, player, opp):
     # Pick best move for current player
     scores.sort(key=lambda x: x[1])
     return scores[-1] if player == "X" else scores[0]
-`
+```
 
 ## Interactive Gameplay
 
