@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>MA</title>
+<link>https://mahbubweb.github.io/blog.html</link>
+<atom:link href="https://mahbubweb.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>A machine learning, quant analyst blog and portfolio by Mahbub Alam</description>
+<language>en-gb</language>
+<image>
+<url>https://mahbubweb.github.io/assets/images/profile.jpeg</url>
+<title>MA</title>
+<link>https://mahbubweb.github.io/blog.html</link>
+</image>
+<generator>quarto-1.9.7</generator>
+<lastBuildDate>Sat, 27 Sep 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Building an Unbeatable AI for TicTacToe</title>
+  <dc:creator>Mahbub Alam, _Ph.D._</dc:creator>
+  <link>https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="can-you-beat-the-ai" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="can-you-beat-the-ai"><span class="header-section-number">1</span> Can You Beat the AI?</h2>
+<p>I recently built an <a href="../../projects/AI_plays_TicTacToe_interactive.html">interactive TicTacToe game</a> where you play against an AI that never loses. The AI uses the classic <strong>minimax algorithm</strong> combined with a clever <strong>magic square representation</strong> to play optimally.</p>
+<p><strong>🎮 Play online (no setup required):</strong> <a href="https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <strong>Run all cells, then find the game at the bottom.</strong></p>
+<p>Click to make your moves as ⭕, while the AI responds as ❌.</p>
+</section>
+<section id="the-magic-square-trick" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-magic-square-trick"><span class="header-section-number">2</span> The Magic Square Trick</h2>
+<p>Instead of checking all possible winning patterns explicitly, I used a 3×3 magic square:</p>
+<table style="border-collapse: collapse; margin: 20px auto; font-size: 18px; text-align: center;">
+<tbody><tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>8</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>3</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>4</b>
+</td>
+</tr>
+<tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>1</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>5</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>9</b>
+</td>
+</tr>
+<tr>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>6</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>7</b>
+</td>
+<td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;">
+<b>2</b>
+</td>
+</tr>
+</tbody></table>
+<p>In a magic square, every row, column, and diagonal sums to 15. (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.) This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.</p>
+<p>For example, in this board position it is the AI’s move (❌):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="media/tictactoe-preview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="&nbsp;"><img src="https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/media/tictactoe-preview.png" class="img-fluid figure-img" width="150" alt="&nbsp;"></a></p>
+<figcaption>&nbsp;</figcaption>
+</figure>
+</div>
+<p>It observes that (two of) the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available. So it plays that position and blocks ⭕’s winning line.</p>
+</section>
+<section id="the-minimax-algorithm" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-minimax-algorithm"><span class="header-section-number">3</span> The Minimax Algorithm</h2>
+<p>The heart of the AI is the minimax algorithm, which:</p>
+<ul>
+<li>Explores all possible future game states recursively</li>
+<li>Assumes both players play optimally</li>
+<li>Gives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy</li>
+<li>Gives score 0 when neither player can force a win</li>
+<li>Returns a tuple: a move that achieves best score for player and the score</li>
+</ul>
+<p>Here’s the core logic:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> minimax(board, player, opp):</span>
+<span id="cb1-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># If no moves left, it's a draw (since AI played perfectly)</span></span>
+<span id="cb1-3">    avail_moves_ <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> avail_moves(board)</span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> avail_moves_:</span>
+<span id="cb1-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-6"></span>
+<span id="cb1-7">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Check if current player can win</span></span>
+<span id="cb1-8">    res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> check_player_win(board, player)</span>
+<span id="cb1-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> res <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-10">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> res</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Try all possible moves</span></span>
+<span id="cb1-13">    scores <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb1-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> avail_moves_:</span>
+<span id="cb1-15">        new_board <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> board.copy()</span>
+<span id="cb1-16">        new_board[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> player</span>
+<span id="cb1-17">        _, score_ <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> minimax(new_board, opp, player)</span>
+<span id="cb1-18">        scores.append((i, score_))</span>
+<span id="cb1-19"></span>
+<span id="cb1-20">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Pick best move for current player</span></span>
+<span id="cb1-21">    scores.sort(key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">lambda</span> x: x[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>])</span>
+<span id="cb1-22">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> scores[<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> player <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"X"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span> scores[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span></code></pre></div></div>
+</section>
+<section id="interactive-gameplay" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="interactive-gameplay"><span class="header-section-number">4</span> Interactive Gameplay</h2>
+<p>You can play the game in Jupyter notebook (<a href="https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a>) with an interactive widget-based interface. Run all cells, then find the game at the bottom. Click to make your move as ⭕, while the AI responds as ❌.</p>
+<p>The AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!</p>
+</section>
+<section id="key-features" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="key-features"><span class="header-section-number">5</span> Key Features</h2>
+<ul>
+<li><strong>Optimal play</strong>: The AI never makes mistakes</li>
+<li><strong>Fast computation</strong>: Magic square logic speeds up win detection</li>
+<li><strong>Interactive UI</strong>: Click-based gameplay using ipywidgets</li>
+<li><strong>Educational</strong>: Clear implementation of classic AI concepts</li>
+</ul>
+<p>The complete code is available on my <a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe">GitHub</a> with detailed comments explaining each component.</p>
+</section>
+<section id="what-i-learned" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">6</span> What I Learned</h2>
+<p>This project reinforced several important concepts:</p>
+<ol type="1">
+<li>How simple mathematical tricks (magic squares) can optimize algorithms</li>
+<li>The elegance of recursive game tree exploration</li>
+<li>The importance of assuming optimal play in competitive AI</li>
+<li>Building interactive experiences in Jupyter notebooks</li>
+</ol>
+<p>Next, I’m planning to extend this approach to more complex games like Connect Four or even Chess endgames!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>AI</category>
+  <category>Game Theory</category>
+  <category>Algorithms</category>
+  <category>Python</category>
+  <guid>https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/</guid>
+  <pubDate>Sat, 27 Sep 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/media/tictactoe-preview.png" medium="image" type="image/png" height="142" width="144"/>
+</item>
+</channel>
+</rss>
