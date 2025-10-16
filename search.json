@@ -11,7 +11,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Building an Unbeatable AI for TicTacToe\n\n\n\nAI\n\nPython\n\nGame Theory\n\nAlgorithms\n\n\n\nHow I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares\n\n\n\n\n\n2025-09-27\n\n\nMahbub Alam, Ph.D.\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Building an Unbeatable AI for TicTacToe\n\n\n\nAI\n\nGame Theory\n\nAlgorithms\n\nPython\n\n\n\nHow I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares\n\n\n\n\n\n2025-09-27\n\n\nMahbub Alam, Ph.D.\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -298,7 +298,7 @@
     "href": "posts/2025-09-27-ai-tictactoe/index.html#the-minimax-algorithm",
     "title": "Building an Unbeatable AI for TicTacToe",
     "section": "3 The Minimax Algorithm",
-    "text": "3 The Minimax Algorithm\nThe heart of the AI is the minimax algorithm, which:\n\nExplores all possible future game states recursively\nAssumes both players play optimally\nGives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy\nReturns a draw (0) when neither player can force a win\nTries to maximize board score\n\nHere’s the core logic:\n`python def minimax(board, player, opp): # Check if current player can win res = check_player_win(board, player) if res is not None: return res\n# If no moves left, it's a draw\navail_moves_ = avail_moves(board)\nif not avail_moves_:\n    return None, 0\n\n# Try all possible moves\nscores = []\nfor i in avail_moves_:\n    new_board = board.copy()\n    new_board[i] = player\n    _, score_ = minimax(new_board, opp, player)\n    scores.append((i, score_))\n\n# Pick best move for current player\nscores.sort(key=lambda x: x[1])\nreturn scores[-1] if player == \"X\" else scores[0]\n`"
+    "text": "3 The Minimax Algorithm\nThe heart of the AI is the minimax algorithm, which:\n\nExplores all possible future game states recursively\nAssumes both players play optimally\nGives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy\nReturns a draw (0) when neither player can force a win\nTries to maximize board score\n\nHere’s the core logic:\ndef minimax(board, player, opp):\n    # Check if current player can win\n    res = check_player_win(board, player)\n    if res is not None:\n        return res\n\n    # If no moves left, it's a draw\n    avail_moves_ = avail_moves(board)\n    if not avail_moves_:\n        return None, 0\n\n    # Try all possible moves\n    scores = []\n    for i in avail_moves_:\n        new_board = board.copy()\n        new_board[i] = player\n        _, score_ = minimax(new_board, opp, player)\n        scores.append((i, score_))\n\n    # Pick best move for current player\n    scores.sort(key=lambda x: x[1])\n    return scores[-1] if player == \"X\" else scores[0]"
   },
   {
     "objectID": "posts/2025-09-27-ai-tictactoe/index.html#interactive-gameplay",
