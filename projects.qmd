@@ -41,11 +41,11 @@ listing:
         description: "Interactive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves."
         date: "2025-09-26"
         categories: [Games, AI, Algorithms]
-      - path: projects/KNN_fruit_detection.ipynb
+      - path: projects/Computer_Vision_in_Agriculture.ipynb
         # image: /projects/knn_fruit.png
-        title: "KNN Fruit Detection"
+        title: "Computer Vision in Agriculture"
         github: "https://github.com/MahbubAlam231/machine-learning-scikit-learn"
-        description: "Detects fruits using a K‑Nearest Neighbors classifier."
+        description: "Classify agricultural produce using a K‑Nearest Neighbors classifier."
         date: "2025-04-04"
         categories: [Machine Learning, Computer Vision]
 ---
