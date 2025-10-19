@@ -21,31 +21,32 @@ listing:
         # image: /projects/creditrisk.png
         title: "Credit Risk Analysis"
         github: "https://github.com/MahbubAlam231/Credit_Risk_Analysis"
-        description: "Credit risk analysis with the German Credit Dataset.
-        Includes PD and LGD modeling and validation, and EAD and ECL estimations.\n
+        description: "End-to-end credit risk modeling pipeline using the German Credit Dataset.
+        Implements Probability of Default (PD) and Loss Given Default (LGD) models with validation, plus Exposure at Default (EAD) and Expected Credit Loss (ECL) estimation.\n
 
-        Logistic Regression, Random Forest, cross validation"
+        Includes logistic regression, random forest, and cross-validation."
         date: "2025-09-16"
         categories: [Finance, Risk, Machine Learning]
       - path: projects/BreastCancerPredictAI.ipynb
         # image: /projects/breastcancer.png
         title: "Breast Cancer Prediction"
         github: "https://github.com/MahbubAlam231/BreastCancerPredictAI"
-        description: "Uses machine‑learning models to classify breast cancer.
-        Includes crossvalidation and has high recall due to industry specific demands."
+        description: "Binary classification model for breast cancer diagnosis optimized for high recall to minimize false negatives, which is critical in medical diagnostics.\n
+
+        Includes feature analysis, model comparison, and cross-validation."
         date: "2025-05-25"
         categories: [Machine Learning, Health]
       - path: projects/AI_plays_TicTacToe_interactive.ipynb
         title: "AI plays TicTacToe"
         github: "https://github.com/MahbubAlam231/AI_plays_TicTacToe"
-        description: "Interactive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves."
+        description: "Interactive TicTacToe game with AI using magic square and minimax algorithm for optimal move selection and stategic gameplay."
         date: "2025-09-26"
-        categories: [Games, AI, Algorithms]
+        categories: [Game Theory, AI, Algorithms]
       - path: projects/Computer_Vision_in_Agriculture.ipynb
         # image: /projects/knn_fruit.png
         title: "Computer Vision in Agriculture"
         github: "https://github.com/MahbubAlam231/machine-learning-scikit-learn"
-        description: "Classify agricultural produce using a K‑Nearest Neighbors classifier."
+        description: "A classification system for automated produce sorting using physical features (mass, dimensions, color) extracted from visual sensors. Comparing and visualizing effect of model hyperparameters for kNN algorithm."
         date: "2025-04-04"
         categories: [Machine Learning, Computer Vision]
 ---
