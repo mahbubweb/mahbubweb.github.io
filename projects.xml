@@ -15,7 +15,7 @@
 <title>MA</title>
 <link>https://mahbubweb.github.io/projects.html</link>
 </image>
-<generator>quarto-1.9.7</generator>
+<generator>quarto-1.9.8</generator>
 <lastBuildDate>Fri, 26 Sep 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>AI plays TicTacToe interactive</title>
@@ -7195,8 +7195,8 @@ Model report:
   <pubDate>Sun, 25 May 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>KNN fruit detection</title>
-  <link>https://mahbubweb.github.io/projects/KNN_fruit_detection.html</link>
+  <title>Computer Vision in Agriculture</title>
+  <link>https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture.html</link>
   <description><![CDATA[ 
 
 
@@ -7215,8 +7215,7 @@ Mahbub Alam
 </tbody></table>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>k-nearest neighbor classifier.</p>
-<p>A small script that trains and evaluates a k-nearest neighbors classifier for fruit detection.</p>
+<p>k-nearest neighbor classifier. A small script that trains and evaluates a k-nearest neighbors classifier for fruit detection.</p>
 <section id="purpose" class="level4">
 <h4 class="anchored" data-anchor-id="purpose">Purpose</h4>
 <ul>
@@ -7224,7 +7223,7 @@ Mahbub Alam
 <li>Train a KNN classifier and evaluate accuracy/metrics.</li>
 <li>Predict on new images.</li>
 </ul>
-<div id="7cd2529b" class="cell" data-execution_count="1">
+<div id="780b5d73" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span>matplotlib inline</span>
@@ -7299,7 +7298,7 @@ font-style: inherit;">f""</span>)</span></code></pre></div></div>
 </section>
 <section id="check-missing-data" class="level2">
 <h2 class="anchored" data-anchor-id="check-missing-data">check missing data</h2>
-<div id="39c376ff" class="cell" data-execution_count="2">
+<div id="3c01f5ba" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">missing_data <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> fruits.isna().<span class="bu" style="color: null;
@@ -7322,7 +7321,7 @@ font-style: inherit;">f""</span>)</span></code></pre></div></div>
 </section>
 <section id="fruit-label-and-name-dictionary" class="level2">
 <h2 class="anchored" data-anchor-id="fruit-label-and-name-dictionary">fruit label and name dictionary</h2>
-<div id="2bcfb15d" class="cell" data-execution_count="3">
+<div id="b083a6a3" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">lookup_fruit_name <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="bu" style="color: null;
@@ -7337,7 +7336,7 @@ font-style: inherit;"># print(lookup_fruit_name) # Output: {1: 'apple', 2: 'mand
 </section>
 <section id="train-test-split" class="level2">
 <h2 class="anchored" data-anchor-id="train-test-split">train test split</h2>
-<div id="db61497a" class="cell" data-execution_count="4">
+<div id="d3c92f1f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">X <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> fruits[[<span class="st" style="color: #20794D;
@@ -7364,7 +7363,7 @@ font-style: inherit;">0</span>)</span></code></pre></div></div>
 </section>
 <section id="learning-with-knn-classifier" class="level2">
 <h2 class="anchored" data-anchor-id="learning-with-knn-classifier">learning with KNN classifier</h2>
-<div id="ea3eb9b6" class="cell" data-execution_count="5">
+<div id="bfb3d76d" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> sklearn.neighbors <span class="im" style="color: #00769E;
@@ -7433,7 +7432,7 @@ font-style: inherit;">in</span> fruit_predictions])</span></code></pre></div></d
 </section>
 <section id="decision-boudaries-for-knn-classifier" class="level2">
 <h2 class="anchored" data-anchor-id="decision-boudaries-for-knn-classifier">decision boudaries for KNN classifier</h2>
-<div id="aef9f9c9" class="cell" data-execution_count="6">
+<div id="b11a64f2" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> utils <span class="im" style="color: #00769E;
@@ -7448,7 +7447,7 @@ font-style: inherit;">'uniform'</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="KNN_fruit_detection_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mahbubweb.github.io/projects/KNN_fruit_detection_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="Computer_Vision_in_Agriculture_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -7456,7 +7455,7 @@ font-style: inherit;">'uniform'</span>)</span></code></pre></div></div>
 </section>
 <section id="classifier-accuracy-vs-k" class="level2">
 <h2 class="anchored" data-anchor-id="classifier-accuracy-vs-k">classifier accuracy vs k</h2>
-<div id="9d395275" class="cell" data-execution_count="7">
+<div id="a6816b37" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">k_range <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="bu" style="color: null;
@@ -7512,7 +7511,7 @@ font-style: inherit;">'knn_accuracy_vs_k.jpg'</span>)</span>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="KNN_fruit_detection_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mahbubweb.github.io/projects/KNN_fruit_detection_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="Computer_Vision_in_Agriculture_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -7520,7 +7519,7 @@ font-style: inherit;">'knn_accuracy_vs_k.jpg'</span>)</span>
 </section>
 <section id="classifier-accuracy-vs-traintest-split" class="level2">
 <h2 class="anchored" data-anchor-id="classifier-accuracy-vs-traintest-split">classifier accuracy vs train/test split</h2>
-<div id="0922c458" class="cell" data-execution_count="8">
+<div id="ba3be9ca" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">t <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> [<span class="fl" style="color: #AD0000;
@@ -7639,7 +7638,7 @@ font-style: inherit;">.jpg'</span>)</span>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="KNN_fruit_detection_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mahbubweb.github.io/projects/KNN_fruit_detection_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="Computer_Vision_in_Agriculture_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -7651,7 +7650,7 @@ font-style: inherit;">.jpg'</span>)</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>Machine Learning</category>
   <category>Computer Vision</category>
-  <guid>https://mahbubweb.github.io/projects/KNN_fruit_detection.html</guid>
+  <guid>https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture.html</guid>
   <pubDate>Fri, 04 Apr 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>

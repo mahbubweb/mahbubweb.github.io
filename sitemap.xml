@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mahbubweb.github.io/projects.html</loc>
-    <lastmod>2025-10-16T18:47:04.934Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/blog.html</loc>
-    <lastmod>2025-10-16T18:47:04.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/index.html</loc>
-    <lastmod>2025-10-16T18:47:04.933Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/KNN_fruit_detection.html</loc>
-    <lastmod>2025-10-16T18:47:04.940Z</lastmod>
+    <loc>https://mahbubweb.github.io/projects/Computer_Vision_in_Agriculture.html</loc>
+    <lastmod>2025-10-19T11:04:39.249Z</lastmod>
   </url>
   <url>
     <loc>https://mahbubweb.github.io/projects/BreastCancerPredictAI.html</loc>
-    <lastmod>2025-10-16T18:47:04.937Z</lastmod>
+    <lastmod>2025-10-19T11:04:39.248Z</lastmod>
   </url>
   <url>
-    <loc>https://mahbubweb.github.io/projects/Credit_Risk_Analysis.html</loc>
-    <lastmod>2025-10-16T18:47:04.939Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/projects/AI_plays_TicTacToe_interactive.html</loc>
-    <lastmod>2025-10-16T18:47:04.934Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/index.html</loc>
-    <lastmod>2025-10-16T18:47:04.933Z</lastmod>
+    <loc>https://mahbubweb.github.io/projects.html</loc>
+    <lastmod>2025-10-19T11:04:39.246Z</lastmod>
   </url>
   <url>
     <loc>https://mahbubweb.github.io/publications.html</loc>
-    <lastmod>2025-10-16T18:47:04.940Z</lastmod>
+    <lastmod>2025-10-19T11:04:39.252Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/blog.html</loc>
+    <lastmod>2025-10-19T11:04:39.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/index.html</loc>
+    <lastmod>2025-10-19T11:04:39.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/index.html</loc>
+    <lastmod>2025-10-19T11:04:39.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/Credit_Risk_Analysis.html</loc>
+    <lastmod>2025-10-19T11:04:39.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mahbubweb.github.io/projects/AI_plays_TicTacToe_interactive.html</loc>
+    <lastmod>2025-10-19T11:04:39.246Z</lastmod>
   </url>
 </urlset>

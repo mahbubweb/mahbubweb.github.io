@@ -1,99 +1,64 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "GitHub  \n\n\nCredit Risk Analysis\n\n\n\n\nFinance\n\nRisk\n\nMachine Learning\n\n\n\n\nCredit risk analysis with the German Credit Dataset. Includes PD and LGD modeling and validation, and EAD and ECL estimations.\nLogistic Regression, Random Forest, cross validation\n\n\n\n2025-09-16\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nBreast Cancer Prediction\n\n\n\n\nMachine Learning\n\nHealth\n\n\n\n\nUses machine‑learning models to classify breast cancer. Includes crossvalidation and has high recall due to industry specific demands.\n\n\n\n2025-05-25\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nAI plays TicTacToe\n\n\n\n\nGames\n\nAI\n\nAlgorithms\n\n\n\n\nInteractive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves.\n\n\n\n2025-09-26\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nKNN Fruit Detection\n\n\n\n\nMachine Learning\n\nComputer Vision\n\n\n\n\nDetects fruits using a K‑Nearest Neighbors classifier.\n\n\n\n2025-04-04\n\n\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Building an Unbeatable AI for TicTacToe\n\n\n\nAI\n\nGame Theory\n\nAlgorithms\n\nPython\n\n\n\nHow I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares\n\n\n\n\n\n2025-09-27\n\n\nMahbub Alam, Ph.D.\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Mahbub Alam, PhD",
-    "section": "",
-    "text": "Projects\nPhD in Mathematics with postdoctoral experience, specializing in statistical analysis, modeling, stochastic processes, and machine learning.\nI have developed Python-based ML solutions for Credit Risk Analysis, Breast Cancer Prediction, and Computer Vision (Object Detection), using logistic regression, random forest, and k-NN algorithms.  I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.\nI bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.\nBased in Uppsala, Sweden. Have a look at my complete  curriculum vitae (for a Swedish version click here)."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Mahbub Alam, PhD",
-    "section": "Education",
-    "text": "Education\n\nPh.D. in Mathematics, 2021 Tata Institute of Fundamental Research, Mumbai, India\nM.Math (Specialised in Statistical methods), 2016 Indian Statistical Institute, Kolkata, India\nB.Sc. in Mathematics, 2014 Presidency University, Kolkata, India"
-  },
-  {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "Mahbub Alam, PhD",
-    "section": "Interests",
-    "text": "Interests\n\nMachine Learning and AI\nData Analysis and Visualisation\nBoard Games\nWatching Movies\nLearning New Skills"
-  },
-  {
-    "objectID": "projects/KNN_fruit_detection.html",
-    "href": "projects/KNN_fruit_detection.html",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html",
+    "href": "projects/Computer_Vision_in_Agriculture.html",
+    "title": "Computer Vision in Agriculture",
     "section": "",
     "text": "Author(s):\n\n\nMahbub Alam"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#introduction",
-    "href": "projects/KNN_fruit_detection.html#introduction",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#introduction",
+    "href": "projects/Computer_Vision_in_Agriculture.html#introduction",
+    "title": "Computer Vision in Agriculture",
     "section": "Introduction",
-    "text": "Introduction\nk-nearest neighbor classifier.\nA small script that trains and evaluates a k-nearest neighbors classifier for fruit detection.\n\nPurpose\n\nLoad features/labels for fruit images.\nTrain a KNN classifier and evaluate accuracy/metrics.\nPredict on new images.\n\n\n%matplotlib inline\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier # importing classifier constructor\nimport warnings\nwarnings.filterwarnings(\"ignore\", message=\"Creating legend with loc=\")\n\nfruits = pd.read_table('fruit_data_with_colors.txt')\n\nprint(fruits.head())\n\n# print(fruits.columns) # Output: ['fruit_label', 'fruit_name', 'fruit_subtype', 'mass', 'width', 'height', 'color_score']\n\nprint(f\"\")\n\n   fruit_label fruit_name fruit_subtype  mass  width  height  color_score\n0            1      apple  granny_smith   192    8.4     7.3         0.55\n1            1      apple  granny_smith   180    8.0     6.8         0.59\n2            1      apple  granny_smith   176    7.4     7.2         0.60\n3            2   mandarin      mandarin    86    6.2     4.7         0.80\n4            2   mandarin      mandarin    84    6.0     4.6         0.79"
+    "text": "Introduction\nk-nearest neighbor classifier. A small script that trains and evaluates a k-nearest neighbors classifier for fruit detection.\n\nPurpose\n\nLoad features/labels for fruit images.\nTrain a KNN classifier and evaluate accuracy/metrics.\nPredict on new images.\n\n\n%matplotlib inline\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier # importing classifier constructor\nimport warnings\nwarnings.filterwarnings(\"ignore\", message=\"Creating legend with loc=\")\n\nfruits = pd.read_table('fruit_data_with_colors.txt')\n\nprint(fruits.head())\n\n# print(fruits.columns) # Output: ['fruit_label', 'fruit_name', 'fruit_subtype', 'mass', 'width', 'height', 'color_score']\n\nprint(f\"\")\n\n   fruit_label fruit_name fruit_subtype  mass  width  height  color_score\n0            1      apple  granny_smith   192    8.4     7.3         0.55\n1            1      apple  granny_smith   180    8.0     6.8         0.59\n2            1      apple  granny_smith   176    7.4     7.2         0.60\n3            2   mandarin      mandarin    86    6.2     4.7         0.80\n4            2   mandarin      mandarin    84    6.0     4.6         0.79"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#check-missing-data",
-    "href": "projects/KNN_fruit_detection.html#check-missing-data",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#check-missing-data",
+    "href": "projects/Computer_Vision_in_Agriculture.html#check-missing-data",
+    "title": "Computer Vision in Agriculture",
     "section": "check missing data",
     "text": "check missing data\n\nmissing_data = fruits.isna().any()  # returns bool on columns\ncols_with_nan = fruits.columns[missing_data].to_list()\nprint(f\"\")"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#fruit-label-and-name-dictionary",
-    "href": "projects/KNN_fruit_detection.html#fruit-label-and-name-dictionary",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#fruit-label-and-name-dictionary",
+    "href": "projects/Computer_Vision_in_Agriculture.html#fruit-label-and-name-dictionary",
+    "title": "Computer Vision in Agriculture",
     "section": "fruit label and name dictionary",
     "text": "fruit label and name dictionary\n\nlookup_fruit_name = dict(zip(fruits.fruit_label.unique(), fruits.fruit_name.unique()))\n# print(lookup_fruit_name) # Output: {1: 'apple', 2: 'mandarin', 3: 'orange', 4: 'lemon'}"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#train-test-split",
-    "href": "projects/KNN_fruit_detection.html#train-test-split",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#train-test-split",
+    "href": "projects/Computer_Vision_in_Agriculture.html#train-test-split",
+    "title": "Computer Vision in Agriculture",
     "section": "train test split",
     "text": "train test split\n\nX = fruits[['mass', 'width', 'height']]\ny = fruits['fruit_label']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#learning-with-knn-classifier",
-    "href": "projects/KNN_fruit_detection.html#learning-with-knn-classifier",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#learning-with-knn-classifier",
+    "href": "projects/Computer_Vision_in_Agriculture.html#learning-with-knn-classifier",
+    "title": "Computer Vision in Agriculture",
     "section": "learning with KNN classifier",
     "text": "learning with KNN classifier\n\nfrom sklearn.neighbors import KNeighborsClassifier\n\nknn = KNeighborsClassifier(n_neighbors = 5)\n\nknn.fit(X_train, y_train)\n\nprint(f\"Accuracy score: {knn.score(X_test, y_test)}\")\n\n\nexample_fruits = pd.DataFrame([[20, 4.3, 5.1], [180, 7.8, 8.3]], columns = X.columns)\nfruit_predictions = knn.predict(example_fruits)\nprint([lookup_fruit_name[label] for label in fruit_predictions])\n\nAccuracy score: 0.5333333333333333\n['mandarin', 'apple']"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#decision-boudaries-for-knn-classifier",
-    "href": "projects/KNN_fruit_detection.html#decision-boudaries-for-knn-classifier",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#decision-boudaries-for-knn-classifier",
+    "href": "projects/Computer_Vision_in_Agriculture.html#decision-boudaries-for-knn-classifier",
+    "title": "Computer Vision in Agriculture",
     "section": "decision boudaries for KNN classifier",
     "text": "decision boudaries for KNN classifier\n\nfrom utils import plot_fruit_knn\n\nplot_fruit_knn(X_train, y_train, 5, 'uniform')"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#classifier-accuracy-vs-k",
-    "href": "projects/KNN_fruit_detection.html#classifier-accuracy-vs-k",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#classifier-accuracy-vs-k",
+    "href": "projects/Computer_Vision_in_Agriculture.html#classifier-accuracy-vs-k",
+    "title": "Computer Vision in Agriculture",
     "section": "classifier accuracy vs k",
     "text": "classifier accuracy vs k\n\nk_range = range(1, 20)\nscores = []\n\nfor k in k_range:\n    knn = KNeighborsClassifier(n_neighbors = k)\n    knn.fit(X_train, y_train)\n    scores.append(knn.score(X_test, y_test))\n\nplt.figure()\nplt.scatter(k_range, scores)\n# Axis labels and title\nplt.xlabel(\"k\")\nplt.ylabel(\"accuracy\")\nplt.xticks(range(0, 20, 5))\nplt.savefig('knn_accuracy_vs_k.jpg')\nplt.show()"
   },
   {
-    "objectID": "projects/KNN_fruit_detection.html#classifier-accuracy-vs-traintest-split",
-    "href": "projects/KNN_fruit_detection.html#classifier-accuracy-vs-traintest-split",
-    "title": "KNN fruit detection",
+    "objectID": "projects/Computer_Vision_in_Agriculture.html#classifier-accuracy-vs-traintest-split",
+    "href": "projects/Computer_Vision_in_Agriculture.html#classifier-accuracy-vs-traintest-split",
+    "title": "Computer Vision in Agriculture",
     "section": "classifier accuracy vs train/test split",
     "text": "classifier accuracy vs train/test split\n\nt = [0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2]\n\nknn = KNeighborsClassifier(n_neighbors = 5)\n\nfile_name = 'knn_accuracy_vs_train_test_split'\n\ntrain_props = []\navg_scores = []\n\nfor s in t:\n    scores = []\n    for i in range(1, 1000):\n        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1 - s)\n        knn.fit(X_train, y_train)\n        scores.append(knn.score(X_test, y_test))\n\n    train_props.append(s * 100)  # Convert to percentage\n    avg_scores.append(np.mean(scores))\n\nplt.figure(figsize=(8, 6))\nplt.plot(train_props, avg_scores, 'bo-')  # Line with points\nplt.xlabel('Training set proportion (%)')\nplt.ylabel('Accuracy')\nplt.title(file_name)\nplt.grid(True)\nplt.savefig(f'{file_name}.jpg')\nplt.show()"
   },
@@ -159,6 +124,97 @@
     "title": "BreastCancerPredictAI",
     "section": "Next Steps",
     "text": "Next Steps\nPotential improvements:\n\nFeature selection to reduce dimensionality\nEnsemble methods for better generalization\nDeployment as a simple web app (e.g., with Flask or Streamlit)\n\nThis would make the project even more practical and showcase end-to-end ML engineering skills."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "GitHub  \n\n\nCredit Risk Analysis\n\n\n\n\nFinance\n\nRisk\n\nMachine Learning\n\n\n\n\nCredit risk analysis with the German Credit Dataset. Includes PD and LGD modeling and validation, and EAD and ECL estimations.\nLogistic Regression, Random Forest, cross validation\n\n\n\n2025-09-16\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nBreast Cancer Prediction\n\n\n\n\nMachine Learning\n\nHealth\n\n\n\n\nUses machine‑learning models to classify breast cancer. Includes crossvalidation and has high recall due to industry specific demands.\n\n\n\n2025-05-25\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nAI plays TicTacToe\n\n\n\n\nGames\n\nAI\n\nAlgorithms\n\n\n\n\nInteractive TicTacToe game with AI using magic square and minimax algorithm which cleverly finds winning moves.\n\n\n\n2025-09-26\n\n\n\n\n\n\n\n\n\n GitHub  \n\n\nComputer Vision in Agriculture\n\n\n\n\nMachine Learning\n\nComputer Vision\n\n\n\n\nClassify agricultural produce using a K‑Nearest Neighbors classifier.\n\n\n\n2025-04-04\n\n\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Year\n\n\nTitle\n\n\nAuthors\n\n\nJournal\n\n\n\n\n\n\n2024\n\n\nHigher moment formulae and limiting distributions of lattice points\n\n\nM. Alam, A. Ghosh, J. Han\n\n\nJ. of the Inst. of Math. of Jussieu\n\n\n\n\n2024\n\n\nAdelic Rogers’ formula and an application\n\n\nMahbub Alam, Andreas Strömbergsson\n\n\nhttps://arxiv.org/abs/2401.13476\n\n\n\n\n2022\n\n\nQuantitative rational approximation on spheres\n\n\nMahbub Alam, Anish Ghosh\n\n\nSelecta Math. (N.S.)\n\n\n\n\n2021\n\n\nQuantitative Diophantine approximation with congruence conditions\n\n\nMahbub Alam, Anish Ghosh, Shucheng Yu\n\n\nJ. Théor. Nombres Bordeaux\n\n\n\n\n2020\n\n\nEquidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation\n\n\nMahbub Alam, Anish Ghosh\n\n\nTrans. Amer. Math. Soc.\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Building an Unbeatable AI for TicTacToe\n\n\n\nAI\n\nGame Theory\n\nAlgorithms\n\nPython\n\n\n\nHow I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares\n\n\n\n\n\n2025-09-27\n\n\nMahbub Alam, Ph.D.\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "",
+    "text": "I recently built an interactive TicTacToe game where you play against an AI that never loses. The AI uses the classic minimax algorithm combined with a clever magic square representation to play optimally.\n🎮 Play online (no setup required):  Run all cells, then find the game at the bottom.\nClick to make your moves as ⭕, while the AI responds as ❌."
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#can-you-beat-the-ai",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#can-you-beat-the-ai",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "",
+    "text": "I recently built an interactive TicTacToe game where you play against an AI that never loses. The AI uses the classic minimax algorithm combined with a clever magic square representation to play optimally.\n🎮 Play online (no setup required):  Run all cells, then find the game at the bottom.\nClick to make your moves as ⭕, while the AI responds as ❌."
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#the-magic-square-trick",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#the-magic-square-trick",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "2 The Magic Square Trick",
+    "text": "2 The Magic Square Trick\nInstead of checking all possible winning patterns explicitly, I used a 3×3 magic square:\n\n\n\n8\n\n\n3\n\n\n4\n\n\n\n\n1\n\n\n5\n\n\n9\n\n\n\n\n6\n\n\n7\n\n\n2\n\n\n\nIn a magic square, every row, column, and diagonal sums to 15. (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.) This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.\nFor example, in this board position it is the AI’s move (❌):\n\n\n\n \n\n\nIt observes that (two of) the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available. So it plays that position and blocks ⭕’s winning line."
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#the-minimax-algorithm",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#the-minimax-algorithm",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "3 The Minimax Algorithm",
+    "text": "3 The Minimax Algorithm\nThe heart of the AI is the minimax algorithm, which:\n\nExplores all possible future game states recursively\nAssumes both players play optimally\nGives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy\nGives score 0 when neither player can force a win\nReturns a tuple: a move that achieves best score for player and the score\n\nHere’s the core logic:\ndef minimax(board, player, opp):\n    # If no moves left, it's a draw (since AI played perfectly)\n    avail_moves_ = avail_moves(board)\n    if not avail_moves_:\n        return None, 0\n\n    # Check if current player can win\n    res = check_player_win(board, player)\n    if res is not None:\n        return res\n\n    # Try all possible moves\n    scores = []\n    for i in avail_moves_:\n        new_board = board.copy()\n        new_board[i] = player\n        _, score_ = minimax(new_board, opp, player)\n        scores.append((i, score_))\n\n    # Pick best move for current player\n    scores.sort(key=lambda x: x[1])\n    return scores[-1] if player == \"X\" else scores[0]"
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#interactive-gameplay",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#interactive-gameplay",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "4 Interactive Gameplay",
+    "text": "4 Interactive Gameplay\nYou can play the game in Jupyter notebook () with an interactive widget-based interface. Run all cells, then find the game at the bottom. Click to make your move as ⭕, while the AI responds as ❌.\nThe AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!"
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#key-features",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#key-features",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "5 Key Features",
+    "text": "5 Key Features\n\nOptimal play: The AI never makes mistakes\nFast computation: Magic square logic speeds up win detection\nInteractive UI: Click-based gameplay using ipywidgets\nEducational: Clear implementation of classic AI concepts\n\nThe complete code is available on my GitHub with detailed comments explaining each component."
+  },
+  {
+    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#what-i-learned",
+    "href": "posts/tictactoe-ai-2025-09-27/index.html#what-i-learned",
+    "title": "Building an Unbeatable AI for TicTacToe",
+    "section": "6 What I Learned",
+    "text": "6 What I Learned\nThis project reinforced several important concepts:\n\nHow simple mathematical tricks (magic squares) can optimize algorithms\nThe elegance of recursive game tree exploration\nThe importance of assuming optimal play in competitive AI\nBuilding interactive experiences in Jupyter notebooks\n\nNext, I’m planning to extend this approach to more complex games like Connect Four or even Chess endgames!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mahbub Alam, PhD",
+    "section": "",
+    "text": "Projects\nPhD in Mathematics with postdoctoral experience, specializing in statistical analysis, modeling, stochastic processes, and machine learning.\nI have developed Python-based ML solutions for Credit Risk Analysis, Breast Cancer Prediction, and Computer Vision (Object Detection), using logistic regression, random forest, and k-NN algorithms.  I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.\nI bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.\nBased in Uppsala, Sweden. Have a look at my complete  curriculum vitae (for a Swedish version click here)."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Mahbub Alam, PhD",
+    "section": "Education",
+    "text": "Education\n\nPh.D. in Mathematics, 2021 Tata Institute of Fundamental Research, Mumbai, India\nM.Math (Specialised in Statistical methods), 2016 Indian Statistical Institute, Kolkata, India\nB.Sc. in Mathematics, 2014 Presidency University, Kolkata, India"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Mahbub Alam, PhD",
+    "section": "Interests",
+    "text": "Interests\n\nMachine Learning and AI\nData Analysis and Visualisation\nBoard Games\nWatching Movies\nLearning New Skills"
   },
   {
     "objectID": "projects/Credit_Risk_Analysis.html",
@@ -271,61 +327,5 @@
     "title": "AI plays TicTacToe interactive",
     "section": "Interactive TicTacToe",
     "text": "Interactive TicTacToe\nNow play the game! Open this notebook in your Jupyter Notebook (or ) and run all code blocks.\nClick cells to make your move as ⭕ while the AI plays as ❌. The AI uses the minimax algorithm, so it plays optimally - try to get a draw! 🎮\n\ndef play_interactive():\n    \"\"\"Jupyter version of main() from AI_plays_TicTacToe.py\"\"\"\n    board = [\"_\"] * 9\n\n    print(\"\")\n    print(68 * \"=\")\n    print(f\"==={'='*14}[[ Welcome to AI plays TicTacToe ]]{'='*14}==\\n\")\n    print(\"AI will play 'X', you play 'O'.\\n\")\n\n    first = input(\"Do you want to play first? [Y/n] \")\n    player, opp = (\"O\", \"X\") if first.lower() != 'n' else (\"X\", \"O\")\n    print(f\"\")\n\n    out = widgets.Output()\n\n    def ai_move():\n        nonlocal player, opp\n        print(\"\\nThis is AI's turn.\\n\")\n        sleep(0.3)\n        res_x = check_player_win(board, \"X\")\n        res_o = check_player_win(board, \"O\")\n\n        if res_x is not None:\n            move_index = res_x[0]\n            board[move_index] = \"X\"\n            update_(buttons, board)\n            with out:\n                clear_output(wait=True)\n                print(\"\\nAI wins!\")\n            disable_all(buttons)\n            return True\n        elif res_o is not None:\n            move_index = res_o[0]\n        else:\n            move_index, _ = minimax(board, \"X\", \"O\")\n\n        board[move_index] = \"X\"\n        update_(buttons, board)\n\n        player, opp = opp, player\n\n        # If your turn is the last turn, already decides if there will be no result\n        if len(avail_moves(board)) == 1:\n            sleep(0.2)\n            board[avail_moves(board)[0]] = player\n            update_(buttons, board)\n            res = check_player_win(board, player)\n            if res is not None:\n                p_name = \"You\"\n                print(f\"{p_name} win!!\")\n            else:\n                with out:\n                    clear_output(wait=True)\n                    print(f\"\\nIt will be a draw!\")\n            disable_all(buttons)\n            return True\n\n        # Ends game when AI takes last empty slot\n        if not avail_moves(board):\n            with out:\n                clear_output(wait=True)\n                print(\"\\nIt's a draw!\")\n            disable_all(buttons)\n            return True\n\n        return False\n\n    def handle_click(btn):\n        nonlocal player, opp\n        if player != \"O\" or board[btn.index] != \"_\":\n            return\n\n        print(\"\\nThis is your turn.\\n\")\n        board[btn.index] = \"O\"\n        update_(buttons, board)\n\n        player, opp = opp, player\n\n        if not avail_moves(board):\n            with out:\n                clear_output(wait=True)\n                print(\"\\nIt's a draw!\")\n            disable_all(buttons)\n            return\n\n        done = ai_move()\n        if done:\n            return\n\n    # Build interactive board\n    grid, buttons = make_board_display(board, handle_click)\n\n    update_(buttons, board)\n    display(grid, out)\n\n    # If AI starts\n    if player == \"X\":\n        ai_move()\n\nplay_interactive()"
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "",
-    "text": "I recently built an interactive TicTacToe game where you play against an AI that never loses. The AI uses the classic minimax algorithm combined with a clever magic square representation to play optimally.\n🎮 Play online (no setup required):  Run all cells, then find the game at the bottom.\nClick to make your moves as ⭕, while the AI responds as ❌."
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#can-you-beat-the-ai",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#can-you-beat-the-ai",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "",
-    "text": "I recently built an interactive TicTacToe game where you play against an AI that never loses. The AI uses the classic minimax algorithm combined with a clever magic square representation to play optimally.\n🎮 Play online (no setup required):  Run all cells, then find the game at the bottom.\nClick to make your moves as ⭕, while the AI responds as ❌."
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#the-magic-square-trick",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#the-magic-square-trick",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "2 The Magic Square Trick",
-    "text": "2 The Magic Square Trick\nInstead of checking all possible winning patterns explicitly, I used a 3×3 magic square:\n\n\n\n8\n\n\n3\n\n\n4\n\n\n\n\n1\n\n\n5\n\n\n9\n\n\n\n\n6\n\n\n7\n\n\n2\n\n\n\nIn a magic square, every row, column, and diagonal sums to 15. (And any three numbers between 1 and 9 that add up to 15 are in a row or column or diagonal.) This means any TicTacToe winning line also sums to 15! This simple observation allows for efficient win detection using basic arithmetic rather than pattern matching.\nFor example, in this board position it is the AI’s move (❌):\n\n\n\n \n\n\nIt observes that (two of) the ⭕ positions add up to 11 which a 4 less than 15, and the square where 4 is in the magic square is available. So it plays that position and blocks ⭕’s winning line."
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#the-minimax-algorithm",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#the-minimax-algorithm",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "3 The Minimax Algorithm",
-    "text": "3 The Minimax Algorithm\nThe heart of the AI is the minimax algorithm, which:\n\nExplores all possible future game states recursively\nAssumes both players play optimally\nGives a score to all possible board positions: +1 if ❌ has a winning strategy and -1 if ⭕ has a winning strategy\nGives score 0 when neither player can force a win\nReturns a tuple: a move that achieves best score for player and the score\n\nHere’s the core logic:\ndef minimax(board, player, opp):\n    # If no moves left, it's a draw (since AI played perfectly)\n    avail_moves_ = avail_moves(board)\n    if not avail_moves_:\n        return None, 0\n\n    # Check if current player can win\n    res = check_player_win(board, player)\n    if res is not None:\n        return res\n\n    # Try all possible moves\n    scores = []\n    for i in avail_moves_:\n        new_board = board.copy()\n        new_board[i] = player\n        _, score_ = minimax(new_board, opp, player)\n        scores.append((i, score_))\n\n    # Pick best move for current player\n    scores.sort(key=lambda x: x[1])\n    return scores[-1] if player == \"X\" else scores[0]"
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#interactive-gameplay",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#interactive-gameplay",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "4 Interactive Gameplay",
-    "text": "4 Interactive Gameplay\nYou can play the game in Jupyter notebook () with an interactive widget-based interface. Run all cells, then find the game at the bottom. Click to make your move as ⭕, while the AI responds as ❌.\nThe AI is truly optimal - the best you can do is force a draw. Give it a try and see if you can achieve that!"
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#key-features",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#key-features",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "5 Key Features",
-    "text": "5 Key Features\n\nOptimal play: The AI never makes mistakes\nFast computation: Magic square logic speeds up win detection\nInteractive UI: Click-based gameplay using ipywidgets\nEducational: Clear implementation of classic AI concepts\n\nThe complete code is available on my GitHub with detailed comments explaining each component."
-  },
-  {
-    "objectID": "posts/tictactoe-ai-2025-09-27/index.html#what-i-learned",
-    "href": "posts/tictactoe-ai-2025-09-27/index.html#what-i-learned",
-    "title": "Building an Unbeatable AI for TicTacToe",
-    "section": "6 What I Learned",
-    "text": "6 What I Learned\nThis project reinforced several important concepts:\n\nHow simple mathematical tricks (magic squares) can optimize algorithms\nThe elegance of recursive game tree exploration\nThe importance of assuming optimal play in competitive AI\nBuilding interactive experiences in Jupyter notebooks\n\nNext, I’m planning to extend this approach to more complex games like Connect Four or even Chess endgames!"
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Year\n\n\nTitle\n\n\nAuthors\n\n\nJournal\n\n\n\n\n\n\n2024\n\n\nHigher moment formulae and limiting distributions of lattice points\n\n\nM. Alam, A. Ghosh, J. Han\n\n\nJ. of the Inst. of Math. of Jussieu\n\n\n\n\n2024\n\n\nAdelic Rogers’ formula and an application\n\n\nMahbub Alam, Andreas Strömbergsson\n\n\nhttps://arxiv.org/abs/2401.13476\n\n\n\n\n2022\n\n\nQuantitative rational approximation on spheres\n\n\nMahbub Alam, Anish Ghosh\n\n\nSelecta Math. (N.S.)\n\n\n\n\n2021\n\n\nQuantitative Diophantine approximation with congruence conditions\n\n\nMahbub Alam, Anish Ghosh, Shucheng Yu\n\n\nJ. Théor. Nombres Bordeaux\n\n\n\n\n2020\n\n\nEquidistribution on homogeneous spaces and the distribution of approximates in Diophantine approximation\n\n\nMahbub Alam, Anish Ghosh\n\n\nTrans. Amer. Math. Soc.\n\n\n\n\nNo matching items\n Back to top"
   }
 ]
