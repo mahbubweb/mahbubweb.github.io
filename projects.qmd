@@ -46,7 +46,7 @@ listing:
         # image: /projects/knn_fruit.png
         title: "Computer Vision in Agriculture"
         github: "https://github.com/MahbubAlam231/machine-learning-scikit-learn"
-        description: "A classification system for automated produce sorting using physical features (mass, dimensions, color) extracted from visual sensors. Comparing and visualizing effect of model hyperparameters for kNN algorithm."
+        description: "A classification system for automated produce sorting using physical features (mass, dimensions, color) extracted from visual sensors. Includes comparison and visualization of the effects of model hyperparameters for kNN algorithm."
         date: "2025-04-04"
         categories: [Machine Learning, Computer Vision]
 ---
