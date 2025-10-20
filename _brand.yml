@@ -1,10 +1,11 @@
 meta:
   name: Mahbub Alam
   license: CC BY-SA 4.0
+  resources:
   link:
     home: https://mahbubweb.github.io
     github: https://github.com/MahbubAlam231
-    linkedin: https://www.linkedin.com/in/mahbub-alam-84899356/
+    linkedin: https://www.linkedin.com/in/mahbubweb/
 color:
   background:
     dark: "#333333"
@@ -18,6 +19,10 @@ color:
   light:
     dark: "#fafafa"
     light: "#333333"
+logo:
+  medium:
+    light: assets/images/MA-logo.light.svg
+    dark: assets/images/MA-logo.dark.svg
 typography:
   fonts:
     - family: Alegreya Sans

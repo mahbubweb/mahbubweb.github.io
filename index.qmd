@@ -25,7 +25,7 @@ about:
         #   href: "https://bsky.app/profile/mickael.canouil.fr"
         #   aria-label: "BlueSky logo linking to mickael.canouil.fr account"
         - text: '{{< iconify fa7-brands:linkedin title="LinkedIn logo linking to my account" label="LinkedIn logo linking to my account" >}}'
-          href: "https://www.linkedin.com/in/mahbub-alam-84899356/"
+          href: "https://www.linkedin.com/in/mahbubweb/"
           aria-label: "LinkedIn logo linking to MahbubAlam account"
         - text: '{{< iconify octicon:mark-github-16 title="GitHub logo linking to my account" label="GitHub logo linking to my account" >}}'
           href: "https://github.com/MahbubAlam231"

@@ -2,16 +2,16 @@ project:
   type: website
   resources:
     - _headers
+    - assets/images
   output-dir: _site
 
 exclude:
 - README.md
 
 website:
-  title: "MA"
+  # title: "personal website"
   description: "A machine learning, quant analyst blog and portfolio by Mahbub Alam"
-  favicon: /assets/images/MA-logo.png
-  image: /assets/images/profile.jpeg
+  image: profile.jpeg
   site-url: https://mahbubweb.github.io/
   repo-url: https://github.com/mahbubweb/mahbubweb.github.io/
   # repo-actions: [edit, issue]
@@ -30,11 +30,9 @@ website:
       License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
 
   navbar:
-    title: "MA"
+    # title: "personal website"
     search: true
     background: dark
-    logo: assets/images/MA-logo.png
-    logo-alt: "MA logo"
     right:
       - text: About
         href: index.qmd
@@ -47,7 +45,7 @@ website:
       - text: Publications
         href: publications.qmd
       - text: '{{< iconify fa7-brands:linkedin title="LinkedIn" label="LinkedIn" >}}'
-        href: 'https://www.linkedin.com/in/mahbub-alam-84899356/'
+        href: 'https://www.linkedin.com/in/mahbubweb/'
         rel: me
       - text: '{{< iconify octicon:mark-github-16 title="GitHub" label="GitHub" >}}'
         href: "https://github.com/MahbubAlam231"

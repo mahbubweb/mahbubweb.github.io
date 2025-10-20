@@ -11,8 +11,8 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  feed:
-    language: en-gb
+  feed: false
+    # language: en-gb
 
 comments:
   giscus:

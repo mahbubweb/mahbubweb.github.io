@@ -1,8 +1,8 @@
 .DS_Store
 /.luarc.json
 /.quarto
-
 /.quarto/
+DESCRIPTION
 
 **/*.quarto_ipynb
 **/.ipynb_checkpoints
