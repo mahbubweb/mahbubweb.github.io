@@ -1,7 +1,7 @@
 ---
 title: "Mahbub Alam, PhD"
 subtitle: |
-  Quantitative Analysis | Machine Learning | Data Science
+  Quantitative Analysis | Machine Learning | Mathematics
 image: /assets/images/profile.jpeg
 format:
   html:
