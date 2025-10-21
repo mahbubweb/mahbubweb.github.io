@@ -1,5 +1,5 @@
 ---
-title: 'Publications'
+title: 'Mahbub Alam: Publications'
 title-block-banner: false
 image: /assets/images/profile.jpeg
 date-format: 'YYYY'
