@@ -9,7 +9,7 @@ title-block-banner: false
 
 author:
   - name: "Mahbub Alam, _Ph.D._"
-    orcid: "0000-0002-5872-7259"
+    # orcid: "0000-0002-5872-7259"
     url: "https://mahbubweb.github.io"
 
 toc: true
