@@ -35,20 +35,27 @@ about:
 ::: {#edu-exp}
 :::
 
-PhD in Mathematics with postdoctoral experience, specializing in ***statistical analysis, modeling, stochastic processes, and machine learning***.
-I develop data-driven solutions that bridge advanced mathematics with real-world applications.
+PhD in Mathematics with postdoctoral experience, specializing in ***probability theory, stochastic processes, statistical modeling, and machine learning***.
+
+I have *7 years of Python experience* building predictive models, running simulations, and analyzing complex datasets.
+<!-- I have build machine learning models for classification and regression across various applications including risk analysis, using Python (Scikit-learn, TensorFlow, Pandas), SQL, and R. -->
+My work includes *risk analysis*, *statistical modeling*, and *machine learning applications* across finance and technology domains using Python (Scikit-learn, TensorFlow, Pandas), SQL, and R.
+
+Passionate about applying *mathematics to real-world problems*: from risk modeling and data-driven decision-making to game mechanics.
+
+Based in Uppsala, Sweden | Fluent in English, proficient in Swedish
+
 <!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
 
 <!-- My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation. -->
 
-I have built Python-based machine learning models for ***credit risk assessment***, ***breast cancer prediction***, and ***image-based classification*** (computer vision), using algorithms including logistic regression, random forest, and k-NN.
+<!-- I have built Python-based machine learning models for ***credit risk assessment***, ***breast cancer prediction***, and ***image-based classification*** (computer vision), using algorithms including logistic regression, random forest, and k-NN. -->
 <!-- I have developed Python-based machine learning solutions for ***Credit Risk Analysis***, ***Breast Cancer Prediction***, and ***Computer Vision (Object Detection)***, using logistic regression, random forest, and k-NN algorithms. -->
 <!-- I have also built a [***TicTacToe playing AI***](posts/tictactoe-ai-2025-09-27). -->
-I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV.
+<!-- I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV. -->
 
-I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains.
+<!-- I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains. -->
 
-Based in Uppsala, Sweden.
 Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 :::: {.grid}
