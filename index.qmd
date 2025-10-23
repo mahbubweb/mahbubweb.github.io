@@ -43,7 +43,9 @@ My work includes *risk analysis*, *statistical modeling*, and *machine learning 
 
 Passionate about applying *mathematics to real-world problems*: from risk modeling and data-driven decision-making to game mechanics.
 
-Based in Uppsala, Sweden | Fluent in English, proficient in Swedish
+Based in Uppsala, Sweden. Fluent in English, proficient in Swedish.
+
+Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 <!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
 
@@ -55,8 +57,6 @@ Based in Uppsala, Sweden | Fluent in English, proficient in Swedish
 <!-- I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV. -->
 
 <!-- I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains. -->
-
-Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 :::: {.grid}
 
