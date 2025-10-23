@@ -1,0 +1,21 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "projects/Credit_Risk_Analysis.html",
+      "projects/BreastCancerPredictAI.html",
+      "projects/AI_plays_TicTacToe_interactive.html",
+      "projects/Computer_Vision_in_Agriculture.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/tictactoe-ai-2025-09-27/index.html"
+    ]
+  },
+  {
+    "listing": "/publications.html",
+    "items": []
+  }
+]
