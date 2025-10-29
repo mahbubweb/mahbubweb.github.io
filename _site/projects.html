@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog</title>
+<title>Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,20 +76,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-github','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-github","listing-description","listing-date","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -133,14 +133,10 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Blog">
-<meta property="og:image" content="https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/media/tictactoe-preview.png">
-<meta property="og:image:height" content="289">
-<meta property="og:image:width" content="294">
-<meta name="twitter:title" content="Blog">
-<meta name="twitter:image" content="https://mahbubweb.github.io/posts/tictactoe-ai-2025-09-27/media/tictactoe-preview.png">
-<meta name="twitter:image-height" content="289">
-<meta name="twitter:image-width" content="294">
+<meta property="og:title" content="Projects">
+<meta property="og:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
+<meta name="twitter:title" content="Projects">
+<meta name="twitter:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -307,7 +303,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -327,11 +323,11 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -355,76 +351,171 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWxnb3JpdGhtcw==">Algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FtZSUyMFRoZW9yeQ==">Game Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWxnb3JpdGhtcw==">Algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluYW5jZQ==">Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FtZSUyMFRoZW9yeQ==">Game Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Umlzaw==">Risk <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projects</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QUklMkNHYW1lJTIwVGhlb3J5JTJDQWxnb3JpdGhtcyUyQ1B5dGhvbg==" data-listing-date-sort="1758931200000" data-listing-file-modified-sort="1761748818265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="745">
-<div class="thumbnail"><a href="./posts/tictactoe-ai-2025-09-27/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/tictactoe-ai-2025-09-27/media/tictactoe-preview.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/tictactoe-ai-2025-09-27/index.html" class="no-external">Building an Unbeatable AI for TicTacToe</a>
-</h3>
+<div class="quarto-listing quarto-listing-container-custom" id="listing-projects">
+<div class="grid text-center list">
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="0" data-categories="RmluYW5jZSUyQ1Jpc2slMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-date-sort="1757980800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/Credit_Risk_Analysis" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html">
+<h5 class="no-anchor card-title listing-title">
+Credit Risk Analysis
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html"></a></p>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Umlzaw=='); return false;">Risk</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>End-to-end credit risk modeling pipeline using the German Credit Dataset. Implements Probability of Default (PD) and Loss Given Default (LGD) models with validation, plus Exposure at Default (EAD) and Expected Credit Loss (ECL) estimation.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-09-16</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/Credit_Risk_Analysis.html" class="card-overlay-link" aria-label="Open Credit Risk Analysis"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="1" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDSGVhbHRo" data-listing-date-sort="1748131200000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/BreastCancerPredictAI" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html">
+<h5 class="no-anchor card-title listing-title">
+Breast Cancer Prediction
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">Health</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Binary classification model for breast cancer diagnosis optimized for high recall to minimize false negatives, which is critical in medical diagnostics. Includes feature analysis, model comparison, and cross-validation.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-05-25</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/BreastCancerPredictAI.html" class="card-overlay-link" aria-label="Open Breast Cancer Prediction"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="2" data-categories="R2FtZSUyMFRoZW9yeSUyQ0FJJTJDQWxnb3JpdGhtcw==" data-listing-date-sort="1758844800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html">
+<h5 class="no-anchor card-title listing-title">
+AI plays TicTacToe
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html"></a></p>
+<div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('R2FtZSUyMFRoZW9yeQ=='); return false;">Game Theory</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+
 <div class="listing-category" onclick="window.quartoListingCategory('QWxnb3JpdGhtcw=='); return false;">Algorithms</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Interactive TicTacToe game with AI using magic square and minimax algorithm for optimal move selection and stategic gameplay.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-09-26</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/AI_plays_TicTacToe_interactive.html" class="card-overlay-link" aria-label="Open AI plays TicTacToe"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="3" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDQ29tcHV0ZXIlMjBWaXNpb24=" data-listing-date-sort="1743724800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/machine-learning-scikit-learn" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/Computer_Vision_in_Agriculture.html">
+<h5 class="no-anchor card-title listing-title">
+Computer Vision in Agriculture
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/Computer_Vision_in_Agriculture.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tcHV0ZXIlMjBWaXNpb24='); return false;">Computer Vision</div>
 
 </div>
-<div class="delink listing-description"><a href="./posts/tictactoe-ai-2025-09-27/index.html" class="no-external">
-<p>How I implemented an optimal TicTacToe AI using the minimax algorithm and magic squares</p>
-</a></div>
+<div class="card-text">
+<div class="listing-description">
+<p>A classification system for automated produce sorting using physical features (mass, dimensions, color) extracted from visual sensors. Includes comparison and visualization of the effects of model hyperparameters for kNN algorithm.</p>
 </div>
-<div class="metadata">
-<a href="./posts/tictactoe-ai-2025-09-27/index.html" class="no-external">
+</div>
 <div class="listing-date">
-2025-09-27
+<p>2025-04-04</p>
 </div>
-<div class="listing-author">
-Mahbub Alam, <em>Ph.D.</em>
 </div>
-</a>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/Computer_Vision_in_Agriculture.html" class="card-overlay-link" aria-label="Open Computer Vision in Agriculture"></a></p>
 </div>
 </div>
 </div>
@@ -899,38 +990,6 @@ Mahbub Alam, <em>Ph.D.</em>
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="light">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "mahbubweb/mahbubweb.github.io";
-    script.dataset.repoId = "R_kgDOQBgpxA";
-    script.dataset.category = "Announcements";
-    script.dataset.categoryId = "DIC_kwDOQBgpxM4Cwnw1";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
