@@ -11,6 +11,7 @@ exclude:
 website:
   # title: "personal website"
   description: "A machine learning, quant analyst blog and portfolio by Mahbub Alam"
+  favicon: /assets/images/MA-logo-hd.png
   image: profile.jpeg
   site-url: https://mahbubweb.github.io/
   repo-url: https://github.com/mahbubweb/mahbubweb.github.io/
