@@ -7,7 +7,9 @@ DESCRIPTION
 **/*.quarto_ipynb
 **/.ipynb_checkpoints
 
-talks.qmd
+/.ignore
+/.ignore/
+**/talks.qmd
 publications.json
 
 _site/
