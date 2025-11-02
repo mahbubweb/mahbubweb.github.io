@@ -45,7 +45,7 @@ Passionate about applying *mathematics to real-world problems*: from risk modeli
 
 Based in Uppsala, Sweden. Fluent in English, proficient in Swedish.
 
-Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf){:target="_blank"} (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf){:target="_blank"}).
+Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
 
 <!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
 
