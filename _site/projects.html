@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mahbub Alam, PhD</title>
+<title>Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,18 +31,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href=".//assets/images/MA-logo-hd.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-633c0b61721e7d70c51a64c1936ce206.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e89caf09d0623b3562a1916cf63f53c8.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-02094989541e67f5013851578745527a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-577a9f049a8a9ffa411554356cbb8915.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-14790add8bb97bca84ccd07bf10d815b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0221f9d55d7377bd1e756ac332fd5500.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -71,18 +74,74 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<meta property="og:title" content="Mahbub Alam, PhD">
-<meta property="og:description" content="Quantitative Analysis | Machine Learning | Mathematics">
+    const options = {
+      valueNames: ['listing-title','listing-github','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-github","listing-description","listing-date","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Projects">
 <meta property="og:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
-<meta name="twitter:title" content="Mahbub Alam, PhD">
-<meta name="twitter:description" content="Quantitative Analysis | Machine Learning | Mathematics">
+<meta name="twitter:title" content="Projects">
 <meta name="twitter:image" content="https://mahbubweb.github.io//assets/images/profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -261,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -269,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -296,83 +355,173 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWxnb3JpdGhtcw==">Algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluYW5jZQ==">Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FtZSUyMFRoZW9yeQ==">Game Theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGVhbHRo">Health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Umlzaw==">Risk <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mahbub Alam, PhD</h1>
-<p class="subtitle lead"></p><p>Quantitative Analysis | Machine Learning | Mathematics</p><p></p>
+<h1 class="title">Projects</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header> <div class="about-links">
-  <a href="/projects.html" class="about-link" rel="" target="">
-     <span class="about-link-text">Projects</span>
-  </a>
-  <a href="mailto:mahbub.dta@gmail.com" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa7-solid:envelope" aria-label="Envelope logo for email" title="Envelope logo for email"></iconify-icon></span>
-  </a>
-  <a href="https://www.linkedin.com/in/mahbubweb/" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa7-brands:linkedin" aria-label="LinkedIn logo linking to my account" title="LinkedIn logo linking to my account"></iconify-icon></span>
-  </a>
-  <a href="https://github.com/MahbubAlam231" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="GitHub logo linking to my account" title="GitHub logo linking to my account"></iconify-icon></span>
-  </a>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-projects">
+<div class="grid text-center list">
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="0" data-categories="RmluYW5jZSUyQ1Jpc2slMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-date-sort="1757980800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/Credit_Risk_Analysis" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html">
+<h5 class="no-anchor card-title listing-title">
+Credit Risk Analysis
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/Credit_Risk_Analysis.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Umlzaw=='); return false;">Risk</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
 </div>
-      <div class="about-contents"><div id="edu-exp">
-</div></div>
-    </div>
-    <img src="/assets/images/profile.jpeg" class="about-image
-  round " style="height: 9em; width: 9em;">
-  </div>
+<div class="card-text">
+<div class="listing-description">
+<p>End-to-end credit risk modeling pipeline using the German Credit Dataset. Implements Probability of Default (PD) and Loss Given Default (LGD) models with validation, plus Exposure at Default (EAD) and Expected Credit Loss (ECL) estimation.</p>
 </div>
-
-<p>PhD in Mathematics with postdoctoral experience, specializing in <strong><em>probability theory, stochastic processes, statistical modeling, and machine learning</em></strong>.</p>
-<p>I have <em>7 years of Python experience</em> building predictive models, running simulations, and analyzing complex datasets. <!-- I have build machine learning models for classification and regression across various applications including risk analysis, using Python (Scikit-learn, TensorFlow, Pandas), SQL, and R. --> My work includes <em>risk analysis</em>, <em>statistical modeling</em>, and <em>machine learning applications</em> across finance and technology domains using Python (Scikit-learn, TensorFlow, Pandas), SQL, and R.</p>
-<p>Passionate about applying <em>mathematics to real-world problems</em>: from risk modeling and data-driven decision-making to game mechanics.</p>
-<p>Based in Uppsala, Sweden. Fluent in English, proficient in Swedish.</p>
-<p>Have a look at my complete <a href="files/CV-Mahbub-Alam-english.pdf"><em><iconify-icon role="img" inline="" icon="fa7-regular:file-lines" aria-label="File Icon" title="File Icon"></iconify-icon> curriculum vitae</em></a> (for a Swedish version <a href="files/CV-Mahbub-Alam-svenska.pdf">click here</a>).</p>
-<!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
-<!-- My background spans the Tata Institute of Fundamental Research, Indian Statistical Institute, and Presidency University, where I built a strong foundation in probability, statistics, and computation. -->
-<!-- I have built Python-based machine learning models for ***credit risk assessment***, ***breast cancer prediction***, and ***image-based classification*** (computer vision), using algorithms including logistic regression, random forest, and k-NN. -->
-<!-- I have developed Python-based machine learning solutions for ***Credit Risk Analysis***, ***Breast Cancer Prediction***, and ***Computer Vision (Object Detection)***, using logistic regression, random forest, and k-NN algorithms. -->
-<!-- I have also built a [***TicTacToe playing AI***](posts/tictactoe-ai-2025-09-27). -->
-<!-- I have also leveraged SQL for data extraction, cleaning, and transformation from large-scale datasets such as MIMIC-IV. -->
-<!-- I bring a strong analytical background, coding proficiency, and a detail-oriented mindset to data-driven problem-solving across finance, tech, and analytics domains. -->
-<div class="grid">
-<section id="education" class="level2 g-col-12 g-col-md-8" style="text-align: left;">
-<h2 data-anchor-id="education">Education</h2>
-<ul>
-<li><p><strong><em>Ph.D.</em> in Mathematics</strong>, <strong>2021</strong> <em>Tata Institute of Fundamental Research, Mumbai, India</em></p></li>
-<li><p><strong><em>M.Math</em></strong> (<em>Specialised in Statistical methods</em>), <strong>2016</strong> <em>Indian Statistical Institute, Kolkata, India</em></p></li>
-<li><p><strong><em>B.Sc.</em> in Mathematics</strong>, <strong>2014</strong> <em>Presidency University, Kolkata, India</em></p></li>
-</ul>
-</section>
-<section id="interests" class="level2 g-col-12 g-col-md-4" style="text-align: left;">
-<h2 data-anchor-id="interests">Interests</h2>
-<ul>
-<li>Machine Learning and AI</li>
-<li>Data Analysis and Visualisation</li>
-<li>Board Games</li>
-<li>Watching Movies</li>
-<li>Learning New Skills</li>
-</ul>
-</section>
 </div>
+<div class="listing-date">
+<p>2025-09-16</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/Credit_Risk_Analysis.html" class="card-overlay-link" aria-label="Open Credit Risk Analysis"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="1" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDSGVhbHRo" data-listing-date-sort="1748131200000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/BreastCancerPredictAI" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html">
+<h5 class="no-anchor card-title listing-title">
+Breast Cancer Prediction
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/BreastCancerPredictAI.html"></a></p>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRo'); return false;">Health</div>
 
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Binary classification model for breast cancer diagnosis optimized for high recall to minimize false negatives, which is critical in medical diagnostics. Includes feature analysis, model comparison, and cross-validation.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-05-25</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/BreastCancerPredictAI.html" class="card-overlay-link" aria-label="Open Breast Cancer Prediction"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="2" data-categories="R2FtZSUyMFRoZW9yeSUyQ0FJJTJDQWxnb3JpdGhtcw==" data-listing-date-sort="1758844800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/AI_plays_TicTacToe" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html">
+<h5 class="no-anchor card-title listing-title">
+AI plays TicTacToe
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/AI_plays_TicTacToe_interactive.html"></a></p>
+<div class="listing-categories">
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<div class="listing-category" onclick="window.quartoListingCategory('R2FtZSUyMFRoZW9yeQ=='); return false;">Game Theory</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxnb3JpdGhtcw=='); return false;">Algorithms</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>Interactive TicTacToe game with AI using magic square and minimax algorithm for optimal move selection and stategic gameplay.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-09-26</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/AI_plays_TicTacToe_interactive.html" class="card-overlay-link" aria-label="Open AI plays TicTacToe"></a></p>
+</div>
+</div>
+<div class="g-col-12 g-col-lg-12 g-col-xl-10" data-index="3" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDQ29tcHV0ZXIlMjBWaXNpb24=" data-listing-date-sort="1743724800000">
+<div class="quarto-grid-item card card-center projects">
+<div class="card-body post-contents">
+<p><a href="https://github.com/MahbubAlam231/machine-learning-scikit-learn" target="_blank" id="github-link" class="quarto-grid-link"> <span class="github-text">GitHub</span> <iconify-icon role="img" inline="" icon="octicon:mark-github-16" aria-label="Icon mark-github-16 from octicon Iconify.design set." title="GitHub Repository" width="22" height="22"></iconify-icon> </a></p>
+<a class="quarto-grid-link" href="./projects/Computer_Vision_in_Agriculture.html">
+<h5 class="no-anchor card-title listing-title">
+Computer Vision in Agriculture
+</h5>
+</a><p><a class="quarto-grid-link" href="./projects/Computer_Vision_in_Agriculture.html"></a></p>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tcHV0ZXIlMjBWaXNpb24='); return false;">Computer Vision</div>
+
+</div>
+<div class="card-text">
+<div class="listing-description">
+<p>A classification system for automated produce sorting using physical features (mass, dimensions, color) extracted from visual sensors. Includes comparison and visualization of the effects of model hyperparameters for kNN algorithm.</p>
+</div>
+</div>
+<div class="listing-date">
+<p>2025-04-04</p>
+</div>
+</div>
+<!--
+  Overlay link covering the entire card.  This anchor sits on top of the card (except for the
+  GitHub link) and makes the whole card clickable, linking to the `.ipynb` project file.
+-->
+<p><a href="./projects/Computer_Vision_in_Agriculture.html" class="card-overlay-link" aria-label="Open Computer Vision in Agriculture"></a></p>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -388,6 +537,13 @@ ul.task-list li input[type="checkbox"] {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
