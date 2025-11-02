@@ -1,4 +1,4 @@
-# mahbubweb.github.io <img src="assets/images/MA-logo.png" align="right" width="120" />
+# mahbubweb.github.io <img src="assets/images/MA-logo-hd.png" align="right" width="120" />
 
 <!-- badges: start -->
 [![License](https://img.shields.io/github/license/mcanouil/mickael.canouil.fr)](LICENSE)
