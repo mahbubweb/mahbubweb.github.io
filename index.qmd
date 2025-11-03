@@ -43,9 +43,9 @@ My work includes *risk analysis*, *statistical modeling*, and *machine learning 
 
 Passionate about applying *mathematics to real-world problems*: from risk modeling and data-driven decision-making to game mechanics.
 
-Based in Uppsala, Sweden. Fluent in English, proficient in Swedish.
-
 Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon" label="File Icon" >}} curriculum vitae_](files/CV-Mahbub-Alam-english.pdf) (for a Swedish version [click here](files/CV-Mahbub-Alam-svenska.pdf)).
+
+***Based in Uppsala, Sweden. Fluent in English, proficient in Swedish.***
 
 <!-- I enjoy applying mathematical rigor to real-world problems in AI-driven decision systems, risk analysis, and finance. -->
 
@@ -63,14 +63,18 @@ Have a look at my complete [_{{< iconify fa7-regular file-lines title="File Icon
 ::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
 ## Education
 
+<!-- - **Postdoctoral Researcher in Mathematics** -->
+<!--   Uppsala University -->
+
 - **_Ph.D._ in Mathematics**, **2021**
   *Tata Institute of Fundamental Research, Mumbai, India*
 
-- **_M.Math_** (*Specialised in Statistical methods*), **2016**
+- **_M. Math_** (*Specialised in Statistical methods*), **2016**
   *Indian Statistical Institute, Kolkata, India*
 
-- **_B.Sc._ in Mathematics**, **2014**
-  *Presidency University, Kolkata, India*
+<!-- - **_B.Sc._ in Mathematics**, **2014** -->
+<!--   *Presidency University, Kolkata, India* -->
+
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
